@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="holder">
+    <div class="image">
+      <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div>
+      <p class="login">Login</p>
+      <form (ngSubmit)="login()" [formGroup]="credentials">
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input formControlName="email" placeholder="example@yahoo.com"><ion-icon name="person-outline"></ion-icon></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"><ion-icon name="lock-closed-outline"></ion-icon></ion-input>
+        </ion-item>
+        <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Login</ion-button>
+      </form>
+      <div class="signinup">
+        <a [routerLink]="['/guest/signup']" routerLinkActive="router-link-active" >Sign Up</a>
+        <a [routerLink]="['/guest/forgotpassword']" routerLinkActive="router-link-active" >Forgot Password</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Powered By Hashtag <br> &copy; 2022</p>
+  </div>
+
+  
+</ion-content>

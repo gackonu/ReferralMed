@@ -1,0 +1,54 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back-outline" defaultHref="/doctor/reports"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Reports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <div class="card">
+    <div class="ion-text-center">
+      <img src="../../../../assets/images/logo.png" alt="">
+    </div>
+    <div class="dets">
+      <span>Name:</span>
+      <span *ngIf="ready">{{reportdetails.referral_patient_name}}</span>
+      <span *ngIf="!ready">Loading</span>
+      <ion-item-divider></ion-item-divider>
+    </div>
+    <div class="dets">
+      <span>Gender:</span>
+      <span *ngIf="ready">{{reportdetails.referral_patient_gender}}</span>
+      <span *ngIf="!ready">...</span>
+      <ion-item-divider></ion-item-divider>
+    </div>
+    <div class="dets">
+      <span>Age:</span>
+      <span *ngIf="ready">{{reportdetails.referral_patient_age}}</span>
+      <span *ngIf="!ready">...</span>
+      <ion-item-divider></ion-item-divider>
+    </div>
+    <div class="dets">
+      <span>Procedure:</span>
+      <span *ngIf="ready">{{reportdetails.report_procedure}}</span>
+      <span *ngIf="!ready">...</span>
+      <ion-item-divider></ion-item-divider>
+    </div>
+    <div class="dets">
+      <span>Date:</span>
+      <span *ngIf="ready">{{reportdetails.referral_date | date: 'dd/MM/YY' }}</span>
+      <span *ngIf="!ready">...</span>
+      <ion-item-divider></ion-item-divider>
+    </div>
+    <div class="dets">
+      <p>Report</p>
+      <div *ngIf="ready">
+        <img src="{{baseurl}}/uploads/reportpictures/{{reportdetails.report_image}}" alt="">
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

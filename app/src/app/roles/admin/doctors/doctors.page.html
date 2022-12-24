@@ -1,0 +1,43 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/admin/completed']" routerLinkActive="router-link-active" >Unpaid Users</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="doctor">
+    <div *ngIf="!ready">
+      Loading...
+    </div>
+
+    <div *ngIf="ready">
+      <span *ngIf="!doctors">
+        <h4>No Doctors Found</h4>
+      </span>
+      <span *ngIf="doctors">
+        <div *ngFor="let item of doctors">
+          <ion-row>
+            <ion-col size="3">
+              <img *ngIf="!ready" src="{{baseurl}}/uploads/profilepictures/default.jpg" alt="">
+              <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/{{item.profile_picture}}" alt="">
+            </ion-col>
+            <ion-col>
+              <span class="name">{{item.first_name}} {{item.last_name}} </span>
+              <span class="balance">Gh&cent; {{item.account_balance}}</span>
+              <span class="number">{{item.phone_number}}</span>
+              <span><ion-button (click)="resetbalance(item.user_id, item.first_name, item.account_balance)" size="small">Make Payment</ion-button></span>
+            </ion-col>
+          </ion-row>
+          <ion-item-divider></ion-item-divider>
+        </div>
+      </span>
+    </div>
+  </div>
+
+</ion-content>

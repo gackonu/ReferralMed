@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="heading">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          <h1>Welcome Back</h1>
+          <h3 *ngIf="!ready">...</h3>
+          <h3 *ngIf="ready">{{userdetails.first_name}}</h3>
+        </ion-col>
+        
+        <ion-col size="3">
+          <img *ngIf="!ready" src="../../../../assets/images/default.jpg" alt="">
+          <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/{{userdetails.profile_picture}}" alt="">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="firstcard">
+    <div class="dateprice">
+      <span>NEXT DUE</span>
+      <span>-</span>
+    </div>
+    <div class="price">
+      <span>Gh&cent;</span>
+      <span *ngIf="!amountdue">--.--</span>
+      <span *ngIf="amountdue">{{amountdue}}</span>
+    </div>
+    <ion-button [routerLink]="['/facility/referrals']" routerLinkActive="router-link-active"  expand="block" color="light">View Referrals</ion-button>
+  </div>
+
+  <div class="stats">
+    <ion-row>
+      <ion-col size="4">
+        <div class="inner">
+          <span *ngIf="!ready">-</span>
+          <span *ngIf="ready">{{stats.referrals_today}}</span>
+          <span>Referrals Today</span>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="inner">
+          <span *ngIf="!ready">-</span>
+          <span *ngIf="ready">{{stats.completed_today}}</span>
+          <span>Completed Today</span>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="inner">
+          <span *ngIf="!ready">-</span>
+          <span *ngIf="ready">{{stats.incomplete_today}}</span>
+          <span>Total Incomplete</span>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+  <div class="pendinglist">
+    <h4>Incoming Patients</h4>
+    <span *ngIf="ready">
+      <div *ngIf="incoming">
+        <span *ngFor="let item of incoming">
+          <ion-row>
+            <ion-col>
+              <span>{{item.referral_patient_name}}</span>
+              <span>{{item.referral_procedures}}</span>
+              <ion-button (click)="markascompleted(item.referral_id, item.referral_patient_name)" size="small">Completed</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-item-divider></ion-item-divider>
+        </span>
+      </div>
+
+
+      <span *ngIf="!incoming">
+        <h5>No Referred Patients</h5>
+      </span>
+
+    </span>
+
+    <span *ngIf="!ready">
+      Loading...
+    </span>
+
+
+
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,85 @@
+.card{
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 0.8em;
+    padding-top: 5px;
+    ion-row{
+        margin-bottom: 1em;
+    }
+    ion-col{
+        &:nth-child(1){
+            span{
+                display: block;
+                &:nth-child(1){
+                    position: absolute;
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    color: var(--ion-color-color1);
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:nth-child(2){
+                    position: absolute;
+                    top: 3px;
+                    font-size: 0.8em;
+                    color: var(--ion-color-dark);
+                    font-weight: bold;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    
+                }
+                &:nth-child(3){
+                    position: absolute;
+                    color: var(--ion-color-dark);
+                    font-weight: bold;
+                    font-size: 0.8em;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 3px;
+                }
+            }
+            
+        }
+        &:nth-child(2){
+            span{
+                display: block;
+                // margin: 0;
+                // padding: 0;
+                .patname{
+                    display: inline;
+                    font-weight: normal;
+                }
+                &:nth-child(1){
+                    font-weight: bold;
+                }
+                &:nth-child(3){
+                    span{
+                        display: inline;
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            ion-icon{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 8px;
+                
+            }
+        }
+    }
+}
+
+.card2{
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    background-color: #fff;
+    border-radius: 8px;
+    h4{
+        text-align: center;
+        padding: 1em;
+    }
+}

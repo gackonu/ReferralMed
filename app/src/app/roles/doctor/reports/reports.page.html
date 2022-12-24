@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar *ngIf="readyreports" placeholder="Patient name" [(ngModel)]="data"></ion-searchbar>
+    <h4>Reports</h4>
+    <div *ngIf="ready">
+      <div *ngIf="!readyreports" class="card ion-padding">
+        <h5>No Reports Yet</h5>
+      </div>
+      <div *ngIf="readyreports">
+        <div *ngFor="let item of readyreports | searchfilter:data:['referral_patient_name']; let i = index">
+          <div class="card" routerLink="/doctor/reportsingle/{{item.report_id}}">
+            <ion-row>
+              <ion-col size="0">
+              </ion-col>
+              <ion-col>
+                <span>{{item.referral_patient_name}}</span>
+                <span>{{item.report_procedure}}</span>
+                <span>{{item.date}}</span>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon size="large" color="color1" name="checkmark-circle"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!ready" class="card ion-padding">
+      <h5>Loading...</h5>
+    </div>
+</ion-content>

@@ -1,0 +1,30 @@
+.doctor{
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 8px;
+    padding: 1em;
+    ion-col{
+        img{
+            border-radius: 50%;
+        }
+        span{
+            display: block;
+        }
+        .name{
+            font-weight: bold;
+        }
+        .balance{
+            font-size: 0.8em;
+        }
+    }
+    ion-item-divider{
+        min-height: 0px;
+    }
+}
+.alert-input-group{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+}

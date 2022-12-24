@@ -1,0 +1,29 @@
+ion-menu{
+    ion-content{
+        --background: #fff;
+        .image{
+            margin: 3em 0;
+            text-align: center;
+            img{
+                // width: 100px;
+            }
+            p{
+                margin: 0;
+            }
+        }
+        ion-list{
+            ion-item{
+                margin: 0.2em 0.5em;
+                border-radius: 8px;
+                padding: 0.1em 0;
+                &.active{
+                    --background: var(--ion-color-color1);
+                    --color: #fff;
+                    ion-icon{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

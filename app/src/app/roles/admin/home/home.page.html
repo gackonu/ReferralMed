@@ -1,0 +1,62 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="estpays">
+    <ion-row>
+      <ion-col>
+        <span *ngIf="ready"> <span> Gh&cent;</span> {{stats.doctorpay}}</span>
+        <span *ngIf="!ready"> <span> Gh&cent;</span> - </span>
+        <span>Dotors Pay</span>
+      </ion-col>
+      <ion-col>
+        <span *ngIf="ready"> <span> Gh&cent;</span> {{stats.centerdue}}</span>
+        <span *ngIf="!ready"> <span> Gh&cent;</span> - </span>
+        <span>Centers Pay Due</span>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <h4 class="ion-text-center refpe">Referred Patients</h4>
+  <div class="referrals" *ngIf="ready">
+    <span *ngIf="pendingreferrals">
+      <span *ngFor="let item of pendingreferrals">
+        <ion-row>
+          <ion-col>
+            <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}}</span>
+            <span *ngIf="!item.referral_patient_name">Patient Name Unset</span>
+            <span>{{item.referral_type}}</span>
+            <span>{{item.referral_procedures}}</span>
+            <span>{{item.referral_patient_contact}}</span>
+            <span>{{item.referral_additional_notes}}</span>
+            <ion-button *ngIf="item.referral_type" (click)="asignto(item.referral_id, item.referral_type)" size="small">Assign</ion-button>
+            <ion-button *ngIf="!item.referral_type" (click)="completeform(item.referral_id)" size="small">Complete Form</ion-button>
+            <ion-button (click)="cancelreferral(item.referral_id, item.referral_patient_name)" color="danger" size="small">Cancel</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-item-divider></ion-item-divider>
+      </span>
+    </span>
+
+    <span *ngIf="!pendingreferrals">
+      <h3 class="ion-text-center">No Pending Referrals</h3>
+    </span>
+
+    <ion-button *ngIf="ongoing" routerLink="/admin/ongoing" color="primary" expand="block">View Ongoing</ion-button>
+    <!-- <ion-button routerLink="/admin/ongoing" color="primary" expand="block">View Completed</ion-button> -->
+
+
+  </div>
+
+  <div class="referrals" *ngIf="!ready">
+    Loading...
+  </div>
+
+</ion-content>

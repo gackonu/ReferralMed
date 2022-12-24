@@ -1,0 +1,498 @@
+CRITICAL - 2022-12-23 11:24:11 --> cors filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\CodeIgniter.php(446): CodeIgniter\Filters\Filters->enableFilter('cors', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 11:25:20 --> cors filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\CodeIgniter.php(446): CodeIgniter\Filters\Filters->enableFilter('cors', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 11:29:58 --> cors filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\CodeIgniter.php(446): CodeIgniter\Filters\Filters->enableFilter('cors', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-23 11:34:47 --> mysqli_sql_exception: Column 'health_worker' cannot be null in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php(89): CodeIgniter\Model->insert(Array)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Auth->signup()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(73): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#13 {main}
+CRITICAL - 2022-12-23 11:34:47 --> Column 'health_worker' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Laura\', \' Cardenas\', \'0247595119\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Laura\', \' Cardenas\', \'0247595119\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Laura\', \' Cardenas\', \'0247595119\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (:first_name:, :last_name:, :phone_number:, :health_worker:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(89): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 11:35:34 --> custom_list is not a valid Validation template.
+in SYSTEMPATH\Validation\Validation.php on line 549.
+ 1 SYSTEMPATH\Validation\Validation.php(549): CodeIgniter\Validation\Exceptions\ValidationException::forInvalidTemplate('custom_list')
+ 2 APPPATH\Controllers\Auth.php(68): CodeIgniter\Validation\Validation->listErrors('custom_list')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 11:48:11 --> custom_validation_errors is not a valid Validation template.
+in SYSTEMPATH\Validation\Validation.php on line 549.
+ 1 SYSTEMPATH\Validation\Validation.php(549): CodeIgniter\Validation\Exceptions\ValidationException::forInvalidTemplate('custom_validation_errors')
+ 2 APPPATH\Controllers\Auth.php(68): CodeIgniter\Validation\Validation->listErrors('custom_validation_errors')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 11:56:51 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\Auth.php on line 72.
+ 1 APPPATH\Controllers\Auth.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\Auth.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:03:13 --> Unsupported operand types: array + string
+in APPPATH\Controllers\Auth.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-23 12:03:45 --> mysqli_sql_exception: Column 'health_worker' cannot be null in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php(95): CodeIgniter\Model->insert(Array)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Auth->signup()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(73): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#13 {main}
+CRITICAL - 2022-12-23 12:03:45 --> Column 'health_worker' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Jordan\', \' Hicks\', \'0247283786\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Jordan\', \' Hicks\', \'0247283786\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Jordan\', \' Hicks\', \'0247283786\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (:first_name:, :last_name:, :phone_number:, :health_worker:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(95): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:04:00 --> Undefined variable $error
+in APPPATH\Controllers\Auth.php on line 77.
+ 1 APPPATH\Controllers\Auth.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'APPPATH\\Controllers\\Auth.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-23 12:08:38 --> mysqli_sql_exception: Column 'health_worker' cannot be null in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php(99): CodeIgniter\Model->insert(Array)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Auth->signup()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(73): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#13 {main}
+CRITICAL - 2022-12-23 12:08:38 --> Column 'health_worker' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Charity\', \' Hodge\', \'0244478659\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Charity\', \' Hodge\', \'0244478659\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (\'Charity\', \' Hodge\', \'0244478659\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user_details` (`first_name`, `last_name`, `phone_number`, `health_worker`) VALUES (:first_name:, :last_name:, :phone_number:, :health_worker:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(99): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->signup()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:11:41 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MDk5LCJuYmYiOjE2NzE4MTkwOTksImV4cCI6MTY3MTgxOTEwMCwiaWQiOiIyIn0.2rZwKcel2ksF30bJDqc8U2J2ilP00o3TmkkBZtBvxUE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:11:41 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MDk5LCJuYmYiOjE2NzE4MTkwOTksImV4cCI6MTY3MTgxOTEwMCwiaWQiOiIyIn0.2rZwKcel2ksF30bJDqc8U2J2ilP00o3TmkkBZtBvxUE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:12:56 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MTc2LCJuYmYiOjE2NzE4MTkxNzYsImV4cCI6MTY3MTgxOTE3NywiaWQiOiIzIn0.ZzyC6hD57dlP84Fw90r7uvG9yoKKWFB8gm9NABi3quQ', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:13:28 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:36:04 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:37:40 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:37:44 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:37:50 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:38:50 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:40:44 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:41:19 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:43:05 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:43:33 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:44:01 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:44:09 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:44:45 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:45:03 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:45:17 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:45:29 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:45:42 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 12:52:38 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODE5MjA3LCJuYmYiOjE2NzE4MTkyMDcsImV4cCI6MTY3MTgxOTIwOCwiaWQiOiI0In0.jeHofRscXbTiR3wwqAoRWLNyjqTqZTJv8GUGDMzmFks', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:15:22 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:15:23 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:15:30 --> Wrong number of segments
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 102.
+ 1 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('C:\\Users\\BadAss\\Documents\\WebDev\\Projects\\Completed\\ReferralMed\\backendnew', 'ReferralMed', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:19:06 --> Wrong number of segments
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 102.
+ 1 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('C:\\Users\\BadAss\\Documents\\WebDev\\Projects\\Completed\\ReferralMed\\backendnew', 'ReferralMed', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:20:06 --> Wrong number of segments
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 102.
+ 1 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('C:\\Users\\BadAss\\Documents\\WebDev\\Projects\\Completed\\ReferralMed\\backendnew', 'ReferralMed', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:20:08 --> Wrong number of segments
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 102.
+ 1 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('C:\\Users\\BadAss\\Documents\\WebDev\\Projects\\Completed\\ReferralMed\\backendnew', 'ReferralMed', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:24:44 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(41): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:25:14 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(265): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->history()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:25:14 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(265): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->history()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:25:28 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(247): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->mytransactions()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:25:28 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(247): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->mytransactions()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:28:00 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Doctor.php(43): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', 'ReferralMed', 'HS256')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:30:49 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Doctor.php on line 343.
+ 1 APPPATH\Controllers\Doctor.php(40): App\Controllers\Doctor->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:30:52 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Doctor.php on line 343.
+ 1 APPPATH\Controllers\Doctor.php(40): App\Controllers\Doctor->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 13:31:22 --> Expired token
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 162.
+ 1 APPPATH\Controllers\Doctor.php(345): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZG9jdG9yIiwiYWl0IjoxNjcxODIyOTIwLCJuYmYiOjE2NzE4MjI5MjAsImV4cCI6MTY3MTgyMjkyMSwiaWQiOiIxIn0.-7ecb941joE95Dapg3eXTHI1U4kkIJWQtBmQu12QsGE', Object(Firebase\JWT\Key))
+ 2 APPPATH\Controllers\Doctor.php(42): App\Controllers\Doctor->decodetoken()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 18:17:50 --> cors filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\CodeIgniter.php(446): CodeIgniter\Filters\Filters->enableFilter('cors', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(73): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 19:57:13 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+in APPPATH\Controllers\Auth.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'APPPATH\\Controllers\\Auth.php', 38)
+ 2 APPPATH\Controllers\Auth.php(38): mail('ackonu111@gmail.com', 'My subject', 'Hello world!', 'From: webmaster@example.com
+CC: somebodyelse@example.com')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->testingmail()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 20:14:29 --> Too few arguments to function App\Models\NotificationsModel::sendnotification(), 3 passed in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php on line 218 and exactly 4 expected
+in APPPATH\Models\NotificationsModel.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(218): App\Models\NotificationsModel->sendnotification('7', 'Your email has been successfully verified. You have full access to your wallet now', '/doctor')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verify('uNkz25CqFVaxoEBM1YyZ7349fe2cf8')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

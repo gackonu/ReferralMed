@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="ready">
+    <span *ngFor="let item of notifications">
+      <div class="notification {{item.notification_status}}" [routerLink]="item.notification_link">
+          <span>{{item.notification_message}}</span>
+          <span>{{item.notification_date | date : 'dd/MM/yyyy'}}</span>
+      </div>
+      <ion-item-divider></ion-item-divider>
+    </span>
+  </div>
+  <div *ngIf="!ready">
+    <h4>Loading</h4>
+  </div>
+
+  
+</ion-content>

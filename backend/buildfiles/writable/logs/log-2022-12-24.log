@@ -1,0 +1,360 @@
+CRITICAL - 2022-12-24 01:35:26 --> Too few arguments to function App\Models\NotificationsModel::sendnotification(), 3 passed in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php on line 218 and exactly 4 expected
+in APPPATH\Models\NotificationsModel.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(218): App\Models\NotificationsModel->sendnotification('1', 'Your email has been successfully verified. You have full access to your wallet now', '/doctor')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verify('zKZGnWkdMA0cfBt9swUCd0ee4f05cc')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 01:46:05 --> Too few arguments to function App\Models\NotificationsModel::sendnotification(), 3 passed in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php on line 218 and exactly 4 expected
+in APPPATH\Models\NotificationsModel.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(218): App\Models\NotificationsModel->sendnotification('1', 'Your email has been successfully verified. You have full access to your wallet now', '/doctor')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verify('0ABrwibxPapn2gcEHCIO84dc372aec')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 01:47:35 --> Too few arguments to function App\Models\NotificationsModel::sendnotification(), 3 passed in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php on line 218 and exactly 4 expected
+in APPPATH\Models\NotificationsModel.php on line 48.
+ 1 APPPATH\Controllers\Auth.php(218): App\Models\NotificationsModel->sendnotification('1', 'Your email has been successfully verified. You have full access to your wallet now', '/doctor')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->verify('0ABrwibxPapn2gcEHCIO84dc372aec')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:06:20 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Facility.php(45): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZmFjaWxpdHkiLCJhaXQiOjE2NzE4NjkxNzUsIm5iZiI6MTY3MTg2OTE3NSwiZXhwIjoxNjcxODY5MTc2LCJpZCI6IjMifQ.dhJmRWf_Ro2KbruN27Xk4OMf75K_cHoqJpek5jevqqQ', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:06:21 --> "kid" empty, unable to lookup correct key
+in FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php on line 434.
+ 1 FCPATH\buildfiles\vendor\firebase\php-jwt\src\JWT.php(128): Firebase\JWT\JWT::getKey('ReferralMed', null)
+ 2 APPPATH\Controllers\Facility.php(45): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWZlcnJhbCBNZWQgQXBwIiwiYXVkIjoiZmFjaWxpdHkiLCJhaXQiOjE2NzE4NjkxNzUsIm5iZiI6MTY3MTg2OTE3NSwiZXhwIjoxNjcxODY5MTc2LCJpZCI6IjMifQ.dhJmRWf_Ro2KbruN27Xk4OMf75K_cHoqJpek5jevqqQ', 'ReferralMed', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->homepage()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:09:32 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Facility.php on line 265.
+ 1 APPPATH\Controllers\Facility.php(204): App\Controllers\Facility->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->allincoming()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:09:33 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Facility.php on line 265.
+ 1 APPPATH\Controllers\Facility.php(204): App\Controllers\Facility->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->allincoming()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:09:37 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Facility.php on line 265.
+ 1 APPPATH\Controllers\Facility.php(44): App\Controllers\Facility->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:09:52 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Facility.php on line 265.
+ 1 APPPATH\Controllers\Facility.php(44): App\Controllers\Facility->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 02:09:53 --> Class "App\Controllers\Key" not found
+in APPPATH\Controllers\Facility.php on line 265.
+ 1 APPPATH\Controllers\Facility.php(44): App\Controllers\Facility->decodetoken()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Facility->homepage()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facility))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 03:48:56 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.mailtrap.io failed: No such host is known.  in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\Users\\BadAss...', 1863)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1863): fsockopen('smtp.mailtrap.i...', 2525, NULL, NULL, 60)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php(120): CodeIgniter\Email\Email->send()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Auth->signup()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+ERROR - 2022-12-24 03:48:56 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2022-12-24 03:48:56 --> 
+ERROR - 2022-12-24 03:50:14 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for smtp.mailtrap.io failed: No such host is known.  in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php:1863
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\Users\\BadAss...', 1863)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1863): fsockopen('smtp.mailtrap.i...', 2525, NULL, NULL, 60)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1777): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1662): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Email\Email.php(1560): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Auth.php(120): CodeIgniter\Email\Email->send()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Auth->signup()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+ERROR - 2022-12-24 03:50:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2022-12-24 03:50:14 --> 
+CRITICAL - 2022-12-24 04:03:01 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:12:42 --> Call to undefined function App\Controllers\php_info()
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:18:32 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:19:28 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:19:34 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 04:23:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2022-12-24 04:23:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 04:24:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backendnew\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2022-12-24 04:24:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:25:14 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 04:31:41 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 05:10:51 --> Class "CodeIgniter\Images\Handlers\GDHandlere" not found
+in SYSTEMPATH\Config\Services.php on line 337.
+ 1 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 2 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 3 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 5 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 6 APPPATH\Controllers\Doctor.php(146): service('image')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 05:11:15 --> Class "Config\GDHandler" not found
+in SYSTEMPATH\Config\Services.php on line 337.
+ 1 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 2 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 3 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 5 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 6 APPPATH\Controllers\Doctor.php(146): service('image')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 05:11:37 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 05:21:35 --> The framework needs the following extension(s) installed and loaded: GD.
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 54.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(34): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(337): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(330): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::image()
+ 7 SYSTEMPATH\Common.php(959): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 APPPATH\Controllers\Doctor.php(146): service('image')
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-24 06:09:57 --> Unable to save the image. Please make sure the image and file directory are writable.
+in SYSTEMPATH\Images\Handlers\GDHandler.php on line 271.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(271): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+ 2 APPPATH\Controllers\Doctor.php(156): CodeIgniter\Images\Handlers\GDHandler->save('./uploads/referralpictures/thumbs/1671883796_a85706a58b20f3539c29.webp')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->uploadpicture()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

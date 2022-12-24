@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Finances</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="!ready" class="card2">
+    <h4>Please Wait</h4>
+  </div>
+  <div *ngIf="ready">
+    <div *ngIf="transactions">
+      <div class="card" *ngFor="let item of transactions">
+        <ion-row>
+          <ion-col size="2">
+            <span>{{item.day}}</span>
+            <span>{{item.month}}</span>
+            <span>{{item.year}}</span>
+          </ion-col>
+          <ion-col>
+            <div>
+              <span>{{item.transactions_status | doctortransactionstate}} <span class="patname" *ngIf="item.transactions_patient_name">({{item.transactions_patient_name}})</span></span>
+            </div>
+           
+            <span>Amount: Gh&cent; {{item.transactions_amount}}</span>
+            <span>Balance After: <span> Gh&cent; {{item.transactions_amount_after}}</span></span>
+          </ion-col>
+          <ion-col size="1">
+            <ion-icon size="large" [name]="item.transactions_status | referralstatusicon" color="color1"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div *ngIf="!transactions" class="card2">
+      <h4>Nothing To Report</h4>
+    </div>
+  </div>
+
+    
+
+
+</ion-content>

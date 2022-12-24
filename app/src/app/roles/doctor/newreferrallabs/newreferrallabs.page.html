@@ -1,0 +1,67 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back-outline" defaultHref="/"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>New Labs Referral</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h4 class="ion-text-center">Enter Patient Details</h4>
+  <div class="card">
+    <form (ngSubmit)="sendrequest()" [formGroup]="referralform" *ngIf="ready">
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Patient Name</ion-label>
+          <ion-input formControlName="patientname" placeholder="Kwame Kwokoto"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Gender</ion-label>
+          <ion-select formControlName="gender">
+            <ion-select-option value="Male">Male</ion-select-option>
+            <ion-select-option value="Female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Patient Age</ion-label>
+          <ion-input formControlName="patientage"  type="number"  placeholder="18"></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Contact</ion-label>
+          <ion-input formControlName="patientcontact"  type="number" placeholder="0555229204"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Proceedure</ion-label>
+          <ion-select formControlName="procedure" multiple="true">
+            #shadow-root
+            <span *ngIf="availableprocedures">
+              <ion-select-option *ngFor="let item of availableprocedures" value="{{item.name}}">{{item.name}}</ion-select-option>
+            </span>
+            <span *ngIf="!availableprocedures">
+              <ion-select-option disabled value="peperoni">No Procedures Added Yet</ion-select-option>
+            </span>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Hospital</ion-label>
+          <ion-select formControlName="hospital">
+            #shadow-root
+            <span *ngIf="hospital">
+              <ion-select-option *ngFor="let item of hospital" value="{{item}}">{{item}}</ion-select-option>
+              <ion-select-option value="Other">Other</ion-select-option>
+            </span>
+            <span *ngIf="!hospital">
+              <ion-select-option value="Other">Other</ion-select-option>
+            </span>
+          </ion-select>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Additional Notes</ion-label>
+          <ion-input formControlName="additionalnotes" placeholder="Enter Additional Notes"></ion-input>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!referralform.valid" color="color1" expand="full">
+          <ion-label>Send Reqeust</ion-label>
+        </ion-button>
+    </form>
+  </div>
+</ion-content>

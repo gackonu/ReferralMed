@@ -1,0 +1,34 @@
+.referrals{
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 8px;
+    h4{
+        margin-top: 0;
+        color: var(--ion-color-color1);
+        font-weight: bold;
+        border-radius: 8;
+    }
+
+    ion-col{
+        span{
+            display: block;
+            &.bold{
+            //   min-width: 300px;
+              font-weight: bold;
+              display: inline-block;
+            }
+        }
+    }
+
+    ion-item-divider{
+        min-height: 0px;
+      }
+
+}
+
+ion-searchbar{
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}

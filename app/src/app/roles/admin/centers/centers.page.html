@@ -1,0 +1,112 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Centers</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleadd()" *ngIf="add"><ion-icon name="remove"></ion-icon></ion-button>
+      <ion-button (click)="toggleadd()" *ngIf="!add"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <div class="add" *ngIf="add">
+    <h5 class="ion-text-center">Add Facility</h5>
+    <form (ngSubmit)="addcenter()" [formGroup]="newcenter">
+      <ion-item>
+        <ion-label position="stacked">Name Of Facility</ion-label>
+        <ion-input formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Location</ion-label>
+        <ion-input formControlName="location"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Price Per Referral</ion-label>
+        <ion-input type="number" formControlName="priceperreferral"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Admin Email</ion-label>
+        <ion-input formControlName="adminemail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Phone Number</ion-label>
+        <ion-input formControlName="contact"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" position="stacked">Type</ion-label>
+        <ion-select formControlName="type">
+          <ion-select-option value="Lab">Lab</ion-select-option>
+          <ion-select-option value="Logistics">Logistics</ion-select-option>
+          <ion-select-option value="Scan">Scan</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button type="submit" [disabled]="!newcenter.valid">Create</ion-button>
+    </form>
+  </div>
+
+  <div class="stats">
+    <ion-row>
+      <ion-col>
+    <div class="card">
+      <span>Scans</span>
+      <span *ngIf="ready">{{count.scan}}</span>
+      <span *ngIf="!ready">-</span>
+    </div>
+      </ion-col>
+      <ion-col>
+    <div class="card">
+      <span>Labs</span>
+      <span *ngIf="ready">{{count.labs}}</span>
+      <span *ngIf="!ready">-</span>
+    </div>
+
+      </ion-col>
+      <ion-col>
+    <div class="card">
+      <span>Logistics</span>
+      <span *ngIf="ready">{{count.logisitics}}</span>
+      <span *ngIf="!ready">-</span>
+    </div>
+      </ion-col>
+    </ion-row>
+
+
+  </div>
+
+  <h4 class="cs">Current Centers</h4>
+  <div class="center">
+    <div *ngIf="ready">
+      <div *ngIf="centers">
+        <div *ngFor="let item of centers">
+          <ion-item>
+            <ion-label>
+              <span> <span>Name:</span> {{item.name}}</span>
+              <span> <span>Type:</span> {{item.type}}</span>
+              <span> <span>Location:</span> {{item.location}}</span>
+              <span> <span>Tel:</span> {{item.contact}}</span>
+              <span> <span>Due:</span>Gh&cent; {{item.due_payment}}</span>
+              <span> <span>Referral:</span>Gh&cent; {{item.price_per_referral}}</span>
+              <ion-button (click)="deletecenter(item.facility_id, item.name)" color="danger">Remove</ion-button>
+              <ion-button (click)="initpayment(item.facility_id, item.name, item.due_payment)" color="success">Payment Made</ion-button>
+            </ion-label>
+          </ion-item>
+          
+        </div>
+
+      </div>
+      <div *ngIf="!centers">
+        No Centers Added Yet
+      </div>
+    </div>
+
+    <div *ngIf="!ready">
+      Loading
+    </div>
+  </div>
+  
+
+</ion-content>

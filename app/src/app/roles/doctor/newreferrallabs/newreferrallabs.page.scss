@@ -1,0 +1,19 @@
+h4{
+    color: var(--ion-color-color1);
+    font-weight: bold;
+}
+.card{
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 0.5em;
+    form{
+        padding: 1em;
+        ion-item{
+            margin-bottom: 0.5em;
+        }
+        ion-item::part(native) {
+            padding-left: 0em;
+        }
+    }
+}

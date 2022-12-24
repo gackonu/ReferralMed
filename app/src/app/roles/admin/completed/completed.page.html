@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back-outline" defaultHref="/admin/doctors"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Completed Referals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="doctor">
+    <div *ngIf="!ready">
+      <h4>Loading...</h4>
+    </div>
+    <div *ngIf="ready">
+      <div *ngIf="!unpaidlist">
+        <h4>No Unpaid Referrals</h4>
+      </div>
+      <div *ngIf="unpaidlist">
+        <span *ngFor="let item of unpaidlist">
+          <ion-row>
+            <ion-col>
+              <span class="name">{{item.referral_patient_name}}</span>
+              <span class="balance">{{item.referral_procedures}}</span>
+              <span class="number">Earned: Gh&cent; {{item.referral_pay}}</span>
+              <span><ion-button (click)="paydoctor(item.referral_id)" size="small">Pay Doctor</ion-button></span>
+            </ion-col>
+          </ion-row>
+          <ion-item-divider></ion-item-divider>
+        </span>
+      </div>
+    </div>
+  </div>
+</ion-content>

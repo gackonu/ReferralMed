@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+    <div *ngIf="!history"><h3 class="ion-text-center">No Referrals Made</h3></div>
+
+    <span *ngIf="history">
+      <div class="card" *ngFor="let item of history">
+        <ion-row>
+          <ion-col size="2">
+            <span>{{item.day}}</span>
+            <span>{{item.month}}</span>
+            <span>{{item.year}}</span>
+          </ion-col>
+          <ion-col>
+            <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}}</span>
+            <span *ngIf="item.referral_procedures">{{item.referral_procedures}}</span>
+            <span *ngIf="!item.referral_patient_name">Image Upload</span>
+            <span *ngIf="!item.referral_procedures">-</span>
+            <span *ngIf="referral_doctor_earned">Earned: <span> Gh&cent; {{item.referral_doctor_earned}}</span></span>
+            <span *ngIf="!referral_doctor_earned">Earned: <span>-</span></span>
+          </ion-col>
+          <ion-col size="1">
+            <ion-icon size="large" [name]="item.referral_status | referralstatusicon"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </div>
+    </span>
+    
+
+
+
+</ion-content>

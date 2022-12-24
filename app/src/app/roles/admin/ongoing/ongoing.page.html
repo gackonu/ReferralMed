@@ -1,0 +1,42 @@
+<ion-header class="ion-no-borde">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back-outline" defaultHref="/"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Ongoing Referrals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar placeholder="Patient name" [(ngModel)]="data"></ion-searchbar>
+
+  <div class="referrals" *ngIf="ready">
+    <span *ngIf="ongoingreferrals">
+      <span *ngFor="let item of ongoingreferrals | searchfilter:data:['referral_patient_name']; let i = index">
+        <ion-row>
+          <ion-col>
+            <span><span class="bold">Patient:</span> {{item.referral_patient_name}}</span>
+            <span><span class="bold">Patient Contact:</span> {{item.referral_patient_contact}}</span>
+            <span><span class="bold">Patient Hospital:</span> {{item.referral_doctor_hospital}}</span>
+            <span><span class="bold">Procedures:</span> {{item.referral_procedures}}</span>
+
+            <span><span class="bold">Center:</span> {{item.name}}</span>
+            <span><span class="bold">Center Location:</span> {{item.Pedu}}</span>
+            <span><span class="bold">Center Contact:</span> {{item.contact}}</span>
+            <ion-button (click)="markascompleted(item.referral_id, item.referral_patient_name)" color="success" size="small">Completed</ion-button>
+            <ion-button (click)="cancelreferral(item.referral_id, item.referral_patient_name)" color="danger" size="small">Cancel</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-item-divider></ion-item-divider>
+      </span>
+    </span>
+
+    <span *ngIf="!ongoingreferrals">
+      <h3 class="ion-text-center">No Ongoing Referrals</h3>
+    </span>
+    
+  </div>
+  <div class="referrals" *ngIf="!ready">
+    Loading...
+  </div>
+</ion-content>

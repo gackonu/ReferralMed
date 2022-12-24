@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleadd()" *ngIf="add"><ion-icon name="remove"></ion-icon></ion-button>
+      <ion-button (click)="toggleadd()" *ngIf="!add"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="card" *ngIf="add">
+    <form (ngSubmit)="additem()" [formGroup]="newitem">
+    <ion-item>
+      <ion-label position="stacked">Procedures Name</ion-label>
+      <ion-input formControlName="procedure"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Type</ion-label>
+      <ion-select formControlName="category">
+        <ion-select-option value="Lab">Lab</ion-select-option>
+        <ion-select-option value="Logistics">Logistics</ion-select-option>
+        <ion-select-option value="Scan">Scan</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!newitem.valid">Add Procedure</ion-button>
+  </form>
+    
+  </div>
+  <br>
+
+  <div class="card">
+   <h4>Available Procedures</h4>
+    <div *ngIf="!available">
+      <p>No Procedures Added Yet</p>
+    </div>
+    
+    <div *ngIf="available">
+      <ion-list>
+        <ion-item-sliding *ngFor="let item of available">
+          <div *ngIf="item.category">            
+            <ion-item>
+              <ion-label>
+                ({{item.category}}) - {{item.name}}
+              </ion-label>
+            </ion-item>
+        
+            <ion-item-options>
+              <ion-item-option (click)="deleteprocedure(item.procedure_id, item.name)" color="danger">
+                <ion-icon slot="bottom" name="trash"></ion-icon>
+                Delete
+              </ion-item-option>
+            </ion-item-options>
+          </div>
+        </ion-item-sliding>
+      </ion-list>      
+    </div>
+
+
+
+<!-- <ion-list>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>
+        Section A
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>A1</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>A2</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>A3</ion-label>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>
+        Section B
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>B1</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>B2</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>B3</ion-label>
+    </ion-item>
+  </ion-item-group>
+</ion-list> -->
+
+  </div>
+</ion-content>

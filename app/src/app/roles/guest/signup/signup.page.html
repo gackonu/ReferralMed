@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="holder">
+    <div class="image">
+      <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div>
+      <p class="login">Create Account</p>
+      <form (ngSubmit)="signup()" [formGroup]="credentials">
+        <ion-item>
+          <ion-label position="stacked">Fullname</ion-label>
+          <ion-input formControlName="fullname" placeholder="John Doe"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input formControlName="email" placeholder="example@yahoo.com"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="stacked">Phone Number</ion-label>
+          <ion-input formControlName="phonenumber" placeholder="0555229204"></ion-input>
+        </ion-item>
+        <!-- <div class="errors">
+          <span>Email is required</span>
+        </div> -->
+        <br>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label position="stacked">Confirm Password</ion-label>
+          <ion-input formControlName="cpassword" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"></ion-input>
+        </ion-item>
+        <!-- <br> -->
+        <span class="notholder">
+          <ion-item>
+            <ion-label>Are you a health worker?</ion-label>
+            <ion-checkbox formControlName="healthworker" slot="start"></ion-checkbox>
+          </ion-item>
+        </span>
+
+        <ion-button type="submit" [disabled]="!credentials.valid" expand="block" disabled>Create Account</ion-button>
+      </form>
+      <div class="signinup">
+        <a [routerLink]="['/guest/signin']">Sign In</a>
+        <a [routerLink]="['/guest/forgotpassword']">Forgot Password</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Powered By Hashtag <br> &copy; 2022</p>
+  </div>
+</ion-content>

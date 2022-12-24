@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="card">
+    <div class="image">
+      <img src="../../../../assets/images/default.jpg" alt="">
+      <ion-fab>
+        <ion-fab-button (click)="takePicture()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <span class="name">James Wilson</span>
+    </div>
+    
+    <form>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input value="Kwame Kwokoto"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Phone Number</ion-label>
+        <ion-input value="0244587956"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input value="user@gmail.com"></ion-input>
+      </ion-item>
+      <ion-button color="color1" expand="block">Update Profile</ion-button>
+    </form>
+  </div>
+</ion-content>

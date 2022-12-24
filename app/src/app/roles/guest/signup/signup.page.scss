@@ -1,0 +1,120 @@
+ion-content{
+    --background: #EEF4FB;
+    @media (prefers-color-scheme: dark) {
+        --background: rgba(0, 0, 0, 0.8);
+    }
+}
+.holder{
+    padding: 1.5em;
+    .image{
+        text-align: center;
+        img{
+            background-color: #fff;
+            border: 1px solid var(--ion-color-color1);
+            border-radius: 8px;
+        }
+    }
+    .login{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--ion-color-color1);
+        @media (prefers-color-scheme: dark) {
+            color: #EEF4FB;
+        }
+    }
+    ion-item{
+        --border-radius: 15px;
+        --inner-border-width: 0px;
+        --inner-box-shadow: none;
+        --highlight-background: rgba(0, 0, 0, 0);
+        --border-color: rgba(0, 0, 0, 0);
+        ion-input{
+            ion-icon{
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+
+    ion-button{
+        --background: var(--ion-color-color1);
+        @media (prefers-color-scheme: dark) {
+            --background: rgb(53, 53, 53);
+            --color: rgb(255, 255, 255);
+        }
+        --border-radius: 3em;
+        margin-top: 1.5em;
+        --box-shadow: none;
+    }
+
+    .signinup{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        a{
+            text-decoration: none;
+            color: var(--ion-color-color1);
+            font-size: 0.8em;
+            @media (prefers-color-scheme: dark) {
+                color: #EEF4FB;
+            }
+        }
+    }
+}
+.notholder{
+    ion-checkbox{
+        margin-right: 13px;
+    }
+    ion-item{
+        --border-radius: 0px;
+        &.ion-activated{
+            background-color: transparent;
+        }
+    }
+    ion-item::part(native) {
+        background-color: transparent;
+        padding-left: 0em;
+    }
+}
+
+.footer{
+    text-align: center;
+    p{
+        font-size: 0.7em;
+    }
+}
+.errors {
+    font-size: small;
+    color: var(--ion-color-danger);
+    // background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 1;
+    position: relative;
+  }
+
+  ion-loading.loading {
+    --background: #e3edff;
+    --spinner-color: var(--ion-color-color1);
+  
+    color: var(--ion-color-color1);
+  }
+
+
+  ion-toast.custom-toast {
+    --background: #F4F4FA;
+    --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    --color: #4b4a50;
+  }
+      
+  ion-toast.custom-toast::part(message) {
+    font-style: italic;
+  }
+  
+  ion-toast.custom-toast::part(button) {
+    border-left: 1px solid #d2d2d2;
+    color: #030207;
+    font-size: 15px;
+  }

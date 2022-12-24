@@ -1,0 +1,43 @@
+.card{
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 8px;
+    padding: 1em;
+    h4{
+        margin-top: 0;
+        color: var(--ion-color-color1);
+        font-weight: bold;
+    }
+
+    ion-col{
+        &:nth-child(1){
+            font-weight: bold;
+        }
+    }
+    
+    h5{
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 0;
+        color: var(--ion-color-color1);
+    }
+    ion-list{
+        ion-item::part(native) {
+            padding-left: 0em;
+        }
+    }
+    ion-button{
+        text-transform: none;
+        --box-shadow: none;
+    }
+}
+
+.addproce{
+    .card{
+        margin: 1em;
+    }
+    ion-item::part(native) {
+        padding-left: 0em;
+    }
+}

@@ -1,0 +1,65 @@
+.stats{
+    .card{
+        background-color: #fff;
+        border-radius: 8px;
+        margin-bottom: 1em;
+        padding: 1em;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur( -10px );
+        span{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            &:nth-child(1){
+                font-size: 1em;
+                color: var(--ion-color-color1);
+            }
+        }
+    }
+}
+
+.add{
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 9px;
+    h5{
+        color: var(--ion-color-color1);
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+    ion-item::part(native) {
+        padding-left: 0em;
+    }
+}
+
+.cs{
+    text-align: center;
+    font-weight: bold;
+    color: var(--ion-color-color1);
+}
+
+.center{
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( -10px );
+    border-radius: 10px;
+    span{
+        display: block;
+        span{
+            display: inline-block;
+            width: 35%;
+            font-weight: bold;
+        }
+    }
+    ion-button{
+        margin-top: 0.5em;
+    }
+    ion-item::part(native) {
+        padding-left: 0em;
+    }
+}
