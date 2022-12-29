@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
   stats: any;
   incoming: any;
   userdetails: any;
-
+  connected = true;
   constructor(
     private calls: CallsService,
     private alert: AlertController,
@@ -47,6 +47,9 @@ export class HomePage implements OnInit {
         }
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 

@@ -8,62 +8,65 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="firstcard">
-    <div class="dateprice">
-      <span>NEXT DUE</span>
-      <span>-</span>
-    </div>
-    <div class="price">
-      <span>Gh&cent;</span>
-      <span *ngIf="!amountdue">--.--</span>
-      <span *ngIf="amountdue">{{amountdue}}</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h4>Transactions Log</h4>
-    <div *ngIf="!ready">Loading</div>
-    <div *ngIf="ready">
-      <div *ngIf="!transactionslog">
-        <h5>No Transactions Recored Yet</h5>
+  <div *ngIf="connected">
+    <div class="firstcard">
+      <div class="dateprice">
+        <span>NEXT DUE</span>
+        <span>-</span>
       </div>
-      <div *ngIf="transactionslog">
-        <div *ngFor="let item of transactionslog">
-          <div *ngIf="item.transactions_status === 'unsettled'">
-            <ion-row>
-              <ion-col>
-                <span>{{item.transactions_patient_name}}</span>
-                <span>{{item.transactions_procedures}}</span>
-                <span>Payment: Gh&cent; {{item.transactions_amount}}</span>
-              </ion-col>
-              <ion-col size="1">
-                <ion-icon size="large" color="color1" name="checkmark-circle"></ion-icon>
-              </ion-col>
-            </ion-row>
-            <ion-item-divider></ion-item-divider>
-          </div>
-        </div>
-        <div *ngFor="let item of transactionslog">
-          <div *ngIf="item.transactions_status === 'settled'">
-            <ion-row>
-              <ion-col>
-                <span>Referal Med</span>
-                <span>Referral Settlement</span>
-                <span>Payment: Gh&cent; {{item.transactions_amount}}</span>
-              </ion-col>
-              <ion-col size="1">
-                <ion-icon size="large" color="color1" name="ribbon-outline"></ion-icon>
-              </ion-col>
-            </ion-row>
-            <ion-item-divider></ion-item-divider>
-          </div>
-        </div>
+      <div class="price">
+        <span>Gh&cent;</span>
+        <span *ngIf="!amountdue">--.--</span>
+        <span *ngIf="amountdue">{{amountdue}}</span>
       </div>
     </div>
-
-
-
-
+  
+    <div class="card">
+      <h4>Transactions Log</h4>
+      <div *ngIf="!ready">Loading</div>
+      <div *ngIf="ready">
+        <div *ngIf="!transactionslog">
+          <h5>No Transactions Recored Yet</h5>
+        </div>
+        <div *ngIf="transactionslog">
+          <div *ngFor="let item of transactionslog">
+            <div *ngIf="item.transactions_status === 'unsettled'">
+              <ion-row>
+                <ion-col>
+                  <span>{{item.transactions_patient_name}}</span>
+                  <span>{{item.transactions_procedures}}</span>
+                  <span>Payment: Gh&cent; {{item.transactions_amount}}</span>
+                </ion-col>
+                <ion-col size="1">
+                  <ion-icon size="large" color="color1" name="checkmark-circle"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+            </div>
+          </div>
+          <div *ngFor="let item of transactionslog">
+            <div *ngIf="item.transactions_status === 'settled'">
+              <ion-row>
+                <ion-col>
+                  <span>Referal Med</span>
+                  <span>Referral Settlement</span>
+                  <span>Payment: Gh&cent; {{item.transactions_amount}}</span>
+                </ion-col>
+                <ion-col size="1">
+                  <ion-icon size="large" color="color1" name="ribbon-outline"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+    </div>
+    
   </div>
-
+  <app-notconnected *ngIf="!connected"></app-notconnected>
 </ion-content>

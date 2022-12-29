@@ -11,7 +11,7 @@ export class TransactionsPage implements OnInit {
   ready = false;
   transactionslog: any;
   amountdue: number;
-
+  connected = true;
 
   constructor(
     private calls: CallsService
@@ -32,6 +32,9 @@ export class TransactionsPage implements OnInit {
         this.transactionslog = Object(info).transactions;
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 }

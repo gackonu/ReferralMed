@@ -10,6 +10,7 @@ export class CompletedreferralsPage implements OnInit {
   ready = false;
   pendingreports: any;
   data: string;
+  connected = true;
 
   constructor(
     private calls: CallsService
@@ -33,6 +34,9 @@ export class CompletedreferralsPage implements OnInit {
         }
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 

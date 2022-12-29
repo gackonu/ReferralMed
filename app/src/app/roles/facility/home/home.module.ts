@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
-
+import { MainModule } from 'src/app/shared/main/main.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MainModule
   ],
   declarations: [HomePage]
 })

@@ -8,141 +8,146 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="card">
-    <h4>Settings and Information</h4>
-    <ion-row>
-      <ion-col size="4">Name:</ion-col>
-      <ion-col size="8" *ngIf="!ready">...</ion-col>
-      <ion-col size="8" *ngIf="ready">{{facilityinfo.name}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">Location:</ion-col>
-      <ion-col size="8" *ngIf="!ready">...</ion-col>
-      <ion-col size="8" *ngIf="ready">{{facilityinfo.location}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">Contact:</ion-col>
-      <ion-col size="8" *ngIf="!ready">...</ion-col>
-      <ion-col size="8" *ngIf="ready">{{facilityinfo.contact}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">Type:</ion-col>
-      <ion-col size="8" *ngIf="!ready">...</ion-col>
-      <ion-col size="8" *ngIf="ready">{{facilityinfo.type}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">Price Per Referral:</ion-col>
-      <ion-col size="8" *ngIf="!ready">...</ion-col>
-      <ion-col size="8" *ngIf="ready">Gh&cent; {{facilityinfo.price_per_referral}}</ion-col>
-    </ion-row>
-
-    <!-- <h5>Pricing</h5>
-    <div *ngIf="myprocedures">
-      <ion-list>
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Sliding Item with Bottom Icons
-            </ion-label>
-          </ion-item>
-      
-          <ion-item-options>
-            <ion-item-option>
-              <ion-icon slot="bottom" name="create"></ion-icon>
-              Edit
-            </ion-item-option>
-            <ion-item-option color="danger">
-              <ion-icon slot="bottom" name="trash"></ion-icon>
-              Delete
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-      
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Sliding Item with Bottom Icons
-            </ion-label>
-          </ion-item>
-      
-          <ion-item-options>
-            <ion-item-option>
-              <ion-icon slot="bottom" name="create"></ion-icon>
-              Edit
-            </ion-item-option>
-            <ion-item-option color="danger">
-              <ion-icon slot="bottom" name="trash"></ion-icon>
-              Delete
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-      
-        <ion-item-sliding>
-          <ion-item>
-            <ion-label>
-              Sliding Item with Bottom Icons
-            </ion-label>
-          </ion-item>
-      
-          <ion-item-options>
-            <ion-item-option>
-              <ion-icon slot="bottom" name="create"></ion-icon>
-              Edit
-            </ion-item-option>
-            <ion-item-option color="danger">
-              <ion-icon slot="bottom" name="trash"></ion-icon>
-              Delete
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
   
-      </ion-list>
-    </div> -->
-
-    <!-- <div *ngIf="!myprocedures">
-      <p>No Procedures</p>
-    </div> -->
-
-
-    <!-- <ion-button color="color1" id="add-procedure">Add Procedure</ion-button> -->
-
-    <ion-modal trigger="add-procedure">
-      <ng-template>
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-button (click)="cancel()">Cancel</ion-button>
-            </ion-buttons>
-            <ion-title>Add Procedure</ion-title>
-            <!-- <ion-buttons slot="end">
-              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-            </ion-buttons> -->
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="addproce">
-          <div class="card">
-            <form [formGroup]="procedureform" (ngSubmit)="addprocedure()">
-              
+  <div *ngIf="connected">
+    <div class="card">
+      <h4>Settings and Information</h4>
+      <ion-row>
+        <ion-col size="4">Name:</ion-col>
+        <ion-col size="8" *ngIf="!ready">...</ion-col>
+        <ion-col size="8" *ngIf="ready">{{facilityinfo.name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">Location:</ion-col>
+        <ion-col size="8" *ngIf="!ready">...</ion-col>
+        <ion-col size="8" *ngIf="ready">{{facilityinfo.location}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">Contact:</ion-col>
+        <ion-col size="8" *ngIf="!ready">...</ion-col>
+        <ion-col size="8" *ngIf="ready">{{facilityinfo.contact}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">Type:</ion-col>
+        <ion-col size="8" *ngIf="!ready">...</ion-col>
+        <ion-col size="8" *ngIf="ready">{{facilityinfo.type}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">Price Per Referral:</ion-col>
+        <ion-col size="8" *ngIf="!ready">...</ion-col>
+        <ion-col size="8" *ngIf="ready">Gh&cent; {{facilityinfo.price_per_referral}}</ion-col>
+      </ion-row>
+  
+      <!-- <h5>Pricing</h5>
+      <div *ngIf="myprocedures">
+        <ion-list>
+          <ion-item-sliding>
             <ion-item>
-              <ion-label position="stacked">Procedure Name</ion-label>
-              <ion-input type="text" placeholder="Procedure/Test" formControlName="procedurename"></ion-input>
+              <ion-label>
+                Sliding Item with Bottom Icons
+              </ion-label>
             </ion-item>
+        
+            <ion-item-options>
+              <ion-item-option>
+                <ion-icon slot="bottom" name="create"></ion-icon>
+                Edit
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="bottom" name="trash"></ion-icon>
+                Delete
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        
+          <ion-item-sliding>
             <ion-item>
-              <ion-label position="stacked">Price</ion-label>
-              <ion-input type="number" placeholder="Price Of Procedure/Test" formControlName="price"></ion-input>
+              <ion-label>
+                Sliding Item with Bottom Icons
+              </ion-label>
             </ion-item>
+        
+            <ion-item-options>
+              <ion-item-option>
+                <ion-icon slot="bottom" name="create"></ion-icon>
+                Edit
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="bottom" name="trash"></ion-icon>
+                Delete
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        
+          <ion-item-sliding>
             <ion-item>
-              <ion-label position="stacked">Price Per Referal</ion-label>
-              <ion-input type="number" placeholder="Payment per referral" formControlName="referral"></ion-input>
+              <ion-label>
+                Sliding Item with Bottom Icons
+              </ion-label>
             </ion-item>
-            <ion-button type="submit" [disabled]="!procedureform.valid">Save</ion-button>
-          </form>
-
-          </div>
-        </ion-content>
-      </ng-template>
-    </ion-modal>
-
-
+        
+            <ion-item-options>
+              <ion-item-option>
+                <ion-icon slot="bottom" name="create"></ion-icon>
+                Edit
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="bottom" name="trash"></ion-icon>
+                Delete
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+    
+        </ion-list>
+      </div> -->
+  
+      <!-- <div *ngIf="!myprocedures">
+        <p>No Procedures</p>
+      </div> -->
+  
+  
+      <!-- <ion-button color="color1" id="add-procedure">Add Procedure</ion-button> -->
+  
+      <ion-modal trigger="add-procedure">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="cancel()">Cancel</ion-button>
+              </ion-buttons>
+              <ion-title>Add Procedure</ion-title>
+              <!-- <ion-buttons slot="end">
+                <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+              </ion-buttons> -->
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="addproce">
+            <div class="card">
+              <form [formGroup]="procedureform" (ngSubmit)="addprocedure()">
+                
+              <ion-item>
+                <ion-label position="stacked">Procedure Name</ion-label>
+                <ion-input type="text" placeholder="Procedure/Test" formControlName="procedurename"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Price</ion-label>
+                <ion-input type="number" placeholder="Price Of Procedure/Test" formControlName="price"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Price Per Referal</ion-label>
+                <ion-input type="number" placeholder="Payment per referral" formControlName="referral"></ion-input>
+              </ion-item>
+              <ion-button type="submit" [disabled]="!procedureform.valid">Save</ion-button>
+            </form>
+  
+            </div>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+  
+  
+    </div>
+    
   </div>
+  <app-notconnected *ngIf="!connected"></app-notconnected>
 </ion-content>

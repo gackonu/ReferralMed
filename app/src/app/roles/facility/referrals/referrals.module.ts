@@ -8,13 +8,14 @@ import { ReferralsPageRoutingModule } from './referrals-routing.module';
 
 import { ReferralsPage } from './referrals.page';
 import { SearchfilterPipe } from 'src/app/pipes/searchfilter.pipe';
-
+import { MainModule } from 'src/app/shared/main/main.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReferralsPageRoutingModule
+    ReferralsPageRoutingModule,
+    MainModule
   ],
   declarations: [ReferralsPage, SearchfilterPipe]
 })

@@ -10,7 +10,7 @@ export class NotificationsPage implements OnInit {
 
   ready = false;
   notifications: any;
-
+  connected = true;
   constructor(
     private calls: CallsService
   ) { }
@@ -29,6 +29,9 @@ export class NotificationsPage implements OnInit {
         this.notifications = Object(info).notifications;
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 

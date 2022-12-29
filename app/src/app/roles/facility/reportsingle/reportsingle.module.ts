@@ -8,7 +8,7 @@ import { ReportsinglePageRoutingModule } from './reportsingle-routing.module';
 
 import { ReportsinglePage } from './reportsingle.page';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
+import { MainModule } from 'src/app/shared/main/main.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +16,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     IonicModule,
     ReportsinglePageRoutingModule,
     CKEditorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainModule
   ],
   declarations: [ReportsinglePage]
 })

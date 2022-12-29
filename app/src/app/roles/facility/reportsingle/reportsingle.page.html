@@ -9,56 +9,59 @@
 
 <ion-content class="ion-padding">
   
-  <div class="card">
-    <div class="ion-text-center">
-      <img src="../../../../assets/images/logo.png" alt="">
-    </div>
-    <span *ngIf="ready">
-      <div class="dets">
-        <span>Name:</span>
-        <span>{{reportdetails.referral_patient_name}}</span>
-        <ion-item-divider></ion-item-divider>
+  <div *ngIf="connected">
+    <div class="card">
+      <div class="ion-text-center">
+        <img src="../../../../assets/images/logo.png" alt="">
       </div>
-      <div class="dets">
-        <span>Gender:</span>
-        <span>{{reportdetails.referral_patient_gender}}</span>
-        <ion-item-divider></ion-item-divider>
-      </div>
-      <div class="dets">
-        <span>Age:</span>
-        <span>{{reportdetails.referral_patient_age}}</span>
-        <ion-item-divider></ion-item-divider>
-      </div>
-      <div class="dets">
-        <span>Procedure:</span>
-        <span>{{reportdetails.report_procedure}}</span>
-        <ion-item-divider></ion-item-divider>
-      </div>
-      <div class="dets">
-        <span>Date:</span>
-        <span>12/08/2022</span>
-        <ion-item-divider></ion-item-divider>
-      </div>
-    </span>
-    <span *ngIf="!ready">
-      <h4>Loading</h4>
-    </span>
-    <form (ngSubmit)="sendreport()" [formGroup]="reportform">
-      <div class="dets">
-        <p>Report</p>
-        <div *ngIf="ready">
-          <img *ngIf="reportdetails.report_image" src="{{baseurl}}/uploads/reportpictures/reportdetails.report_image" alt="">
-          <div class="ion-text-center" *ngIf="!reportdetails.report_image">Awaiting Upload</div>
+      <span *ngIf="ready">
+        <div class="dets">
+          <span>Name:</span>
+          <span>{{reportdetails.referral_patient_name}}</span>
+          <ion-item-divider></ion-item-divider>
         </div>
-        <ion-button expand="block" (click)="takepicture()">
-          <ion-icon slot="icon-only" name="camera"></ion-icon>
-        </ion-button>
-        <span *ngIf="pictureset">
-          <img [src]="reportpreview"/>
-          <ion-button expand="full" (click)="updatereport()">Submit Report</ion-button>
-        </span>
-      </div>
-    </form>
+        <div class="dets">
+          <span>Gender:</span>
+          <span>{{reportdetails.referral_patient_gender}}</span>
+          <ion-item-divider></ion-item-divider>
+        </div>
+        <div class="dets">
+          <span>Age:</span>
+          <span>{{reportdetails.referral_patient_age}}</span>
+          <ion-item-divider></ion-item-divider>
+        </div>
+        <div class="dets">
+          <span>Procedure:</span>
+          <span>{{reportdetails.report_procedure}}</span>
+          <ion-item-divider></ion-item-divider>
+        </div>
+        <div class="dets">
+          <span>Date:</span>
+          <span>12/08/2022</span>
+          <ion-item-divider></ion-item-divider>
+        </div>
+      </span>
+      <span *ngIf="!ready">
+        <h4>Loading</h4>
+      </span>
+      <form (ngSubmit)="sendreport()" [formGroup]="reportform">
+        <div class="dets">
+          <p>Report</p>
+          <div *ngIf="ready">
+            <img *ngIf="reportdetails.report_image" src="{{baseurl}}/uploads/reportpictures/reportdetails.report_image" alt="">
+            <div class="ion-text-center" *ngIf="!reportdetails.report_image">Awaiting Upload</div>
+          </div>
+          <ion-button expand="block" (click)="takepicture()">
+            <ion-icon slot="icon-only" name="camera"></ion-icon>
+          </ion-button>
+          <span *ngIf="pictureset">
+            <img [src]="reportpreview"/>
+            <ion-button expand="full" (click)="updatereport()">Submit Report</ion-button>
+          </span>
+        </div>
+      </form>
+    </div>
+    
   </div>
-  
+  <app-notconnected *ngIf="!connected"></app-notconnected>
 </ion-content>

@@ -27,6 +27,7 @@ export class ReportsinglePage implements OnInit {
   reportpreview: any;
   filedata: any = '';
   reportform: FormGroup;
+  connected = true;
 
   constructor(
     private calls: CallsService,
@@ -63,6 +64,9 @@ export class ReportsinglePage implements OnInit {
         this.router.navigateByUrl('/facility/home');
       }
       this.ready = true;
+    },
+    err => {
+      this.connected = false;
     });
   }
 
