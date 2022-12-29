@@ -8,31 +8,73 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="card">
-    <div class="image">
-      <img src="../../../../assets/images/default.jpg" alt="">
-      <ion-fab>
-        <ion-fab-button (click)="takePicture()">
-          <ion-icon name="camera"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-      <span class="name">James Wilson</span>
+  <div *ngIf="connected">    
+    <div class="card">
+      <div class="image">
+        <img *ngIf="!ready" src="{{baseurl}}/uploads/profilepictures/thumbs/default.jpg" alt="">
+        <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/thumbs/{{info.profile_picture}}" alt="">
+        <ion-fab>
+          <ion-fab-button (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+        <span *ngIf="!ready" class="name">...</span>
+        <span *ngIf="ready" class="name">{{info.first_name}} {{info.last_name}}</span>
+        <span *ngIf="ready" class="balance">Account Balance: Gh&cent; {{info.account_balance}}</span>
+        <span *ngIf="!ready" class="balance">Account Balance: Gh&cent; 00.00</span>
+      </div>
+      
+      <form (ngSubmit)="updateprofile()" [formGroup]="profileform" *ngIf="ready">
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Name</ion-label>
+          <ion-input formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Phone Number</ion-label>
+          <ion-input formControlName="phonenumber"></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input readonly value="{{info.email}}"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="info.hospital">
+          <ion-label position="stacked">Hospital</ion-label>
+          <ion-select class="toremit" placeholder="{{info.hospital}}" formControlName="hospital" multiple="true">
+            <ion-select-option *ngFor="let item of hospitals" checked [value]="item.hospital_name">{{item.hospital_name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="!info.hospital">
+          <ion-label position="stacked">Hospital</ion-label>
+          <ion-select formControlName="hospital" placeholder="Choose Hospital" multiple="true">
+            <ion-select-option *ngFor="let item of hospitals" [value]="item.hospital_name">{{item.hospital_name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-button [disabled]="!profileform.valid" type="submit" color="color1" expand="block">Update Profile</ion-button>
+      </form>
+      <form *ngIf="!ready">
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Name</ion-label>
+          <ion-input value=""></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Phone Number</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding">
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Hospital</ion-label>
+          <ion-select multiple="true">
+            <ion-select-option value="peperoni">Peperoni</ion-select-option>
+            <ion-select-option value="hawaii">Hawaii</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-button type="submit" color="color1" expand="block">Update Profile</ion-button>
+      </form>
     </div>
-    
-    <form>
-      <ion-item class="ion-no-padding">
-        <ion-label position="stacked">Name</ion-label>
-        <ion-input value="Kwame Kwokoto"></ion-input>
-      </ion-item>
-      <ion-item class="ion-no-padding">
-        <ion-label position="stacked">Phone Number</ion-label>
-        <ion-input value="0244587956"></ion-input>
-      </ion-item>
-      <ion-item class="ion-no-padding">
-        <ion-label position="stacked">Email</ion-label>
-        <ion-input value="user@gmail.com"></ion-input>
-      </ion-item>
-      <ion-button color="color1" expand="block">Update Profile</ion-button>
-    </form>
   </div>
+
+  <app-notconnected *ngIf="!connected"></app-notconnected>
 </ion-content>
