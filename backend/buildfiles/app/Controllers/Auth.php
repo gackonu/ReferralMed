@@ -332,7 +332,6 @@ class Auth extends BaseController{
         $email = \Config\Services::email();
         $email->setTo($this->request->getvar('email'));
         $email->setSubject("Reset Password");
-        $email->setMessage('Hello');
         $template = view("emailtemplates/resetpassword", [
             'name'          => $username, 
             'baseurl'       => base_url(), 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotconnectedComponent } from 'src/app/components/notconnected/notconnected.component';
 import { DoctorComponent } from './doctor.component';
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'newreferrallogistics',
     loadChildren: () => import('./newreferrallogistics/newreferrallogistics.module').then( m => m.NewreferrallogisticsPageModule)
+  },
+  {
+    path: 'noconnection/:page',
+    component: NotconnectedComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: '**', pathMatch: 'full', redirectTo: 'home'},

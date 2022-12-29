@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { CallsService } from 'src/app/services/calls.service';
 import { PhotoService } from 'src/app/services/photo.service';
@@ -15,14 +16,14 @@ export class ProfilePage implements OnInit {
   info: any;
   hospitals: any;
   profileform: FormGroup;
-
+  connected = true;
 
   constructor(
     private calls: CallsService,
     private fb: FormBuilder,
     private loading: LoadingController,
     private toast: ToastController,
-    public photo: PhotoService
+    public photo: PhotoService,
   ) {
     this.baseurl = this.calls.getbaseurl();
   }
@@ -40,6 +41,9 @@ export class ProfilePage implements OnInit {
       this.hospitals = Object(info).hospitals;
       this.ready = true;
       this.prepareform();
+    },
+    err => {
+      this.connected = false;
     });
   }
 

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NewreferrallogisticsPageRoutingModule } from './newreferrallogistics-routing.module';
 
 import { NewreferrallogisticsPage } from './newreferrallogistics.page';
+import { MainModule } from 'src/app/shared/main/main.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { NewreferrallogisticsPage } from './newreferrallogistics.page';
     FormsModule,
     IonicModule,
     NewreferrallogisticsPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainModule
   ],
   declarations: [NewreferrallogisticsPage]
 })

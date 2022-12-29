@@ -2,8 +2,8 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { StorageService } from './storage.service';
 
-const baseurl = 'https://crazy-black.51-210-240-92.plesk.page';
-// const baseurl = 'http://localhost:8080';
+// const baseurl = 'https://crazy-black.51-210-240-92.plesk.page';
+const baseurl = 'http://localhost:8080';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +11,8 @@ export class CallsService {
   token: any;
   role: any;
 
-  private baseurl = 'https://crazy-black.51-210-240-92.plesk.page/api';
-  // private baseurl = 'http://localhost:8080/api';
+  // private baseurl = 'https://crazy-black.51-210-240-92.plesk.page/api';
+  private baseurl = 'http://localhost:8080/api';
   constructor(
     private http: HttpClient,
     private storage: StorageService
@@ -23,7 +23,6 @@ export class CallsService {
   rolecheck(){
     const info = this.storage.getItem('token');
     const role = this.storage.getItem('role');
-
 
       if(info){
           this.token = info;

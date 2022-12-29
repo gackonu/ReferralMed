@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CallsService } from 'src/app/services/calls.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CallsService } from 'src/app/services/calls.service';
 })
 export class HistoryPage implements OnInit {
   history: any;
-
+  connected = true;
   constructor(
     private calls: CallsService,
   ) { }
@@ -26,6 +27,9 @@ export class HistoryPage implements OnInit {
       if(Object(info).history.length){
         this.history = Object(info).history;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 

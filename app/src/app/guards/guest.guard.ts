@@ -14,7 +14,7 @@ export class GuestGuard implements CanLoad {
 
   canLoad(): any {
     const role = this.storage.getItem('role');
-      if(role === null){
+      if(!role){
         return true;
       } else {
         this.router.navigateByUrl('/doctor');

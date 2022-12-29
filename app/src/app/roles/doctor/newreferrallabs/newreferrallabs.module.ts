@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NewreferrallabsPageRoutingModule } from './newreferrallabs-routing.module';
 
 import { NewreferrallabsPage } from './newreferrallabs.page';
+import { MainModule } from 'src/app/shared/main/main.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { NewreferrallabsPage } from './newreferrallabs.page';
     FormsModule,
     IonicModule,
     NewreferrallabsPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainModule
   ],
   declarations: [NewreferrallabsPage]
 })

@@ -15,6 +15,7 @@ export class NewreferrallabsPage implements OnInit {
   availableprocedures: any;
   ready= false;
   hospital: any;
+  connected = true;
 
   constructor(
     private calls: CallsService,
@@ -69,6 +70,9 @@ export class NewreferrallabsPage implements OnInit {
         alert.present();
       }
       this.prepareform();
+    },
+    err => {
+      this.connected = false;
     });
   }
 

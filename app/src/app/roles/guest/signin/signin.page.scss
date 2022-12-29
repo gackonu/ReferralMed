@@ -65,7 +65,12 @@ ion-content{
 }
 
 .footer{
+    position: absolute;
     text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2em;
     p{
         font-size: 0.7em;
     }
