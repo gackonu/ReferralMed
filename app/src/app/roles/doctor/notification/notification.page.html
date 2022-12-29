@@ -9,18 +9,21 @@
 
 <ion-content>
 
-  <div *ngIf="ready">
-    <span *ngFor="let item of notifications">
-      <div class="notification {{item.notification_status}}" [routerLink]="item.notification_link">
-          <span>{{item.notification_message}}</span>
-          <span>{{item.notification_date | date : 'dd/MM/yyyy'}}</span>
-      </div>
-      <ion-item-divider></ion-item-divider>
-    </span>
+  <div *ngIf="connected">    
+    <div *ngIf="ready">
+      <span *ngFor="let item of notifications">
+        <div class="notification {{item.notification_status}}" [routerLink]="item.notification_link">
+            <span>{{item.notification_message}}</span>
+            <span>{{item.notification_date | date : 'dd/MM/yyyy'}}</span>
+        </div>
+        <ion-item-divider></ion-item-divider>
+      </span>
+    </div>
+    <div *ngIf="!ready">
+      <h4>Loading</h4>
+    </div>
   </div>
-  <div *ngIf="!ready">
-    <h4>Loading</h4>
-  </div>
-
+  
+  <app-notconnected *ngIf="!connected"></app-notconnected>
   
 </ion-content>

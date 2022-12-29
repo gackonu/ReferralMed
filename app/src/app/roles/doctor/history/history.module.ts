@@ -8,14 +8,16 @@ import { HistoryPageRoutingModule } from './history-routing.module';
 
 import { HistoryPage } from './history.page';
 import { ReferralstatusiconPipe } from 'src/app/pipes/referralstatusicon.pipe';
+import { MainModule } from 'src/app/shared/main/main.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HistoryPageRoutingModule
+    HistoryPageRoutingModule,
+    MainModule
   ],
-  declarations: [HistoryPage, ReferralstatusiconPipe]
+  declarations: [HistoryPage]
 })
 export class HistoryPageModule {}

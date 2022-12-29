@@ -207,7 +207,7 @@ class Doctor extends BaseController {
     }
 
     public function getreports(){
-        $decode         = $this->decodetoken();
+        $decoded         = $this->decodetoken();
 
         $reports = $this->reports->select('report_id, report_procedure, referral_patient_name, referral_date')
                                  ->where('report_doctor_id', $decoded->id)

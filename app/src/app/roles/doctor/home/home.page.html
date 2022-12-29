@@ -7,120 +7,127 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <ion-fab *ngIf="!quicksend" vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="dark" (click)="photomode()">
-      <ion-icon name="camera-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 
-  <ion-fab *ngIf="quicksend" vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="light" (click)="normalmode()">
-      <ion-icon name="arrow-back-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-
-  <div class="heading">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="9">
-          <h1>Welcome Back</h1>
-          <h3 *ngIf="ready">{{userinfo.first_name}}</h3>
-        </ion-col>
+  <div *ngIf="connected">
+    <ion-fab *ngIf="!quicksend" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="dark" (click)="photomode()">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    <ion-fab *ngIf="quicksend" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="light" (click)="normalmode()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+  
+    <div class="heading">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <h1>Welcome Back</h1>
+            <h3 *ngIf="ready">{{userinfo.first_name}}</h3>
+          </ion-col>
+          
+          <ion-col size="3">
+            <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/thumbs/{{userinfo.profile_picture}}" alt="">
+            <img *ngIf="!ready" src="../../../../assets/images/default.jpg" alt="">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <span *ngIf="ready">
+        <h4 class="balance" *ngIf="verified"><span>Wallet: </span> <span *ngIf="ready"> Gh&cent; {{userinfo.account_balance}} </span></h4>
+        <h4 class="balance inactive" *ngIf="!verified"><span>Email Verification required to view wallet</span></h4>
+      </span>
+      <span *ngIf="!ready">
+        <h4 class="balance"><span>Loading Wallet Please Wait</span></h4>
         
-        <ion-col size="3">
-          <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/thumbs/{{userinfo.profile_picture}}" alt="">
-          <img *ngIf="!ready" src="../../../../assets/images/default.jpg" alt="">
+      </span>
+  
+    </div>
+    <!-- Othneal Selasi Dotsi
+    P.O.Box K 31, Kotokraba, Cape Coast
+    dotsiselasi8@gmail.com
+    0556233518
+  
+  Apostle Dr. Patrick O. Koomsom
+  Komenda SHTS Box Km 35, Komenda C/R
+  apostlekoomson@gmailcom
+  
+  Bishop Francis Ackonu
+  P.O.Box DL 80 Cape Coast C/R
+  francisackonu01@gmail.com
+  0244659498 -->
+    <div *ngIf="!quicksend" class="account">
+     <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="inner">
+            <span *ngIf="ready">{{stats.total}}</span>
+            <span *ngIf="!ready">-</span>
+            <span>Total</span>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="inner">
+            <span *ngIf="ready">{{stats.success}}</span>
+            <span *ngIf="!ready">-</span>
+            <span>Successful</span>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="inner">
+            <span *ngIf="ready">{{stats.pending}}</span>
+            <span *ngIf="!ready">-</span>
+            <span>Pending</span>
+          </div>
         </ion-col>
       </ion-row>
-    </ion-grid>
-    <span *ngIf="ready">
-      <h4 class="balance" *ngIf="verified"><span>Wallet: </span> <span *ngIf="ready"> Gh&cent; {{userinfo.account_balance}} </span></h4>
-      <h4 class="balance inactive" *ngIf="!verified"><span>Email Verification required to view wallet</span></h4>
-    </span>
-    <span *ngIf="!ready">
-      <h4 class="balance"><span>Loading Wallet Please Wait</span></h4>
-      
-    </span>
-
-  </div>
-  <!-- Othneal Selasi Dotsi
-  P.O.Box K 31, Kotokraba, Cape Coast
-  dotsiselasi8@gmail.com
-  0556233518
-
-Apostle Dr. Patrick O. Koomsom
-Komenda SHTS Box Km 35, Komenda C/R
-apostlekoomson@gmailcom
-
-Bishop Francis Ackonu
-P.O.Box DL 80 Cape Coast C/R
-francisackonu01@gmail.com
-0244659498 -->
-  <div *ngIf="!quicksend" class="account">
-   <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div class="inner">
-          <span *ngIf="ready">{{stats.total}}</span>
-          <span *ngIf="!ready">-</span>
-          <span>Total</span>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="inner">
-          <span *ngIf="ready">{{stats.success}}</span>
-          <span *ngIf="!ready">-</span>
-          <span>Successful</span>
-        </div>
-      </ion-col>
-      <ion-col>
-        <div class="inner">
-          <span *ngIf="ready">{{stats.pending}}</span>
-          <span *ngIf="!ready">-</span>
-          <span>Pending</span>
-        </div>
-      </ion-col>
-    </ion-row>
-   </ion-grid>
-  </div>
-
+     </ion-grid>
+    </div>
   
-  <div class="today" *ngIf="!quicksend">
-    <h4>Today's Referrals</h4>
-      <ion-list>
-          <span class="noref" *ngIf="!ready">
-            Loading
-          </span>
-          <span *ngIf="ready">
-            <span *ngIf="referrals">
-              <ion-item *ngFor="let item of referrals"><span *ngIf="!item.referral_patient_name"> Image Upload </span> <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}} </span><ion-icon slot="end" [name]="item.referral_status | referralstatusicon"></ion-icon></ion-item>
+    
+    <div class="today" *ngIf="!quicksend">
+      <h4>Today's Referrals</h4>
+        <ion-list>
+            <span class="noref" *ngIf="!ready">
+              Loading
             </span>
-            <div *ngIf="!referrals">
-              <p class="noref">No Referrals Made Today</p>
-            </div>
-          </span>
-          <ion-button (click)="createnew()" color="color1" expand="block">
-            <ion-icon name="add"></ion-icon>
-            <ion-label>New Referral</ion-label>
-          </ion-button>
-      </ion-list>
-
+            <span *ngIf="ready">
+              <span *ngIf="referrals">
+                <ion-item *ngFor="let item of referrals"><span *ngIf="!item.referral_patient_name"> Image Upload </span> <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}} </span><ion-icon slot="end" [name]="item.referral_status | referralstatusicon"></ion-icon></ion-item>
+              </span>
+              <div *ngIf="!referrals">
+                <p class="noref">No Referrals Made Today</p>
+              </div>
+            </span>
+            <ion-button (click)="createnew()" color="color1" expand="block">
+              <ion-icon name="add"></ion-icon>
+              <ion-label>New Referral</ion-label>
+            </ion-button>
+        </ion-list>
+  
+    </div>
+  
+    <div *ngIf="quicksend" class="quicksend" >
+      <img [src]="quicksendimage"/>
+      <form [formGroup]="quicksendform" (ngSubmit)="quicksendsend()">
+        <ion-item>
+          <ion-label position="stacked">Patient Contact</ion-label>
+          <ion-input required type="number" formControlName="contact"></ion-input>
+        </ion-item>
+        <ion-button block color="primary" type="submit" [disabled]="!quicksendform.valid">
+          Send
+        </ion-button>
+      </form>
+    </div>
   </div>
 
-  <div *ngIf="quicksend" class="quicksend" >
-    <img [src]="quicksendimage"/>
-    <form [formGroup]="quicksendform" (ngSubmit)="quicksendsend()">
-      <ion-item>
-        <ion-label position="stacked">Patient Contact</ion-label>
-        <ion-input required type="number" formControlName="contact"></ion-input>
-      </ion-item>
-      <ion-button block color="primary" type="submit" [disabled]="!quicksendform.valid">
-        Send
-      </ion-button>
-    </form>
-  </div>
+  <app-notconnected *ngIf="!connected"></app-notconnected>
+
 
   
 
 </ion-content>
+

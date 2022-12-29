@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CallsService } from 'src/app/services/calls.service';
 
 @Component({
@@ -10,9 +11,10 @@ export class TranscationsPage implements OnInit {
 
   ready = false;
   transactions: any;
+  connected = true;
 
   constructor(
-    private calls: CallsService
+    private calls: CallsService,
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,9 @@ export class TranscationsPage implements OnInit {
         }
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 

@@ -15,7 +15,7 @@ export class SettingsPage implements OnInit {
   myprocedures: any;
   ready = false;
   procedureform: FormGroup;
-
+  connected = true;
   constructor(
     private calls: CallsService,
     private toast: ToastController,
@@ -53,6 +53,9 @@ export class SettingsPage implements OnInit {
       }
       this.ready = true;
       console.log(this.facilityinfo);
+    },
+    err => {
+      this.connected = false;
     });
   }
 

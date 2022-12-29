@@ -15,6 +15,7 @@ export class NewreferrallogisticsPage implements OnInit {
   availableprocedures: any;
   ready= false;
   hospital: any;
+  connected = true;
   constructor(
     private calls: CallsService,
     private loading: LoadingController,
@@ -68,6 +69,9 @@ export class NewreferrallogisticsPage implements OnInit {
         alert.present();
       }
       this.prepareform();
+    },
+    err => {
+      this.connected = false;
     });
   }
 

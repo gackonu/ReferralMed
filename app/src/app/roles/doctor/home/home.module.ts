@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { ReferralstatusiconPipe } from 'src/app/pipes/referralstatusicon.pipe';
+import { MainModule } from 'src/app/shared/main/main.module';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { ReferralstatusiconPipe } from 'src/app/pipes/referralstatusicon.pipe';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainModule
   ],
-  declarations: [HomePage, ReferralstatusiconPipe]
+  declarations: [HomePage]
 })
 export class HomePageModule {}

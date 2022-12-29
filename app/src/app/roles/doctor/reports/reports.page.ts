@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CallsService } from 'src/app/services/calls.service';
 
 @Component({
@@ -10,9 +11,10 @@ export class ReportsPage implements OnInit {
   ready = false;
   readyreports: any;
   data: string;
+  connected = true;
 
   constructor(
-    private calls: CallsService
+    private calls: CallsService,
   ) { }
 
   ngOnInit() {
@@ -29,6 +31,9 @@ export class ReportsPage implements OnInit {
         this.readyreports = Object(info).reports;
       }
       this.ready = true;
+    },
+    err => {
+      this.connected = false;
     });
   }
 

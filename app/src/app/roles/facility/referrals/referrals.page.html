@@ -11,36 +11,41 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-searchbar placeholder="Patient name" [(ngModel)]="data"></ion-searchbar>
-  <div class="card">
-    <h4>Incoming Patients</h4>
-    <span *ngIf="ready">
-      <div *ngIf="incoming">
-        <span *ngFor="let item of incoming | searchfilter:data:['referral_patient_name']; let i = index">
-          <ion-row>
-            <ion-col>
-              <span>{{item.referral_patient_name}}</span>
-              <span>{{item.referral_procedures}}</span>
-              <ion-button (click)="markascompleted(item.referral_id, item.referral_patient_name)" size="small">Completed</ion-button>
-            </ion-col>
-          </ion-row>
-          <ion-item-divider></ion-item-divider>
+  
+  <div *ngIf="connected">
+    <ion-searchbar placeholder="Patient name" [(ngModel)]="data"></ion-searchbar>
+    <div class="card">
+      <h4>Incoming Patients</h4>
+      <span *ngIf="ready">
+        <div *ngIf="incoming">
+          <span *ngFor="let item of incoming | searchfilter:data:['referral_patient_name']; let i = index">
+            <ion-row>
+              <ion-col>
+                <span>{{item.referral_patient_name}}</span>
+                <span>{{item.referral_procedures}}</span>
+                <ion-button (click)="markascompleted(item.referral_id, item.referral_patient_name)" size="small">Completed</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-item-divider></ion-item-divider>
+          </span>
+        </div>
+  
+  
+        <span *ngIf="!incoming">
+          <h5>No Referred Patients</h5>
         </span>
-      </div>
-
-
-      <span *ngIf="!incoming">
-        <h5>No Referred Patients</h5>
+  
       </span>
-
-    </span>
-
-    <span *ngIf="!ready">
-      Loading...
-    </span>
-
-
-
-
+  
+      <span *ngIf="!ready">
+        Loading...
+      </span>
+  
+  
+  
+  
+    </div>
+    
   </div>
+  <app-notconnected *ngIf="!connected"></app-notconnected>
 </ion-content>

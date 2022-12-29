@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CallsService } from 'src/app/services/calls.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class ReportsinglePage implements OnInit {
   ready = false;
   reportdetails: any;
   reportid: number;
+  connected = true;
   constructor(
     private calls: CallsService,
     private activatedroute: ActivatedRoute,
@@ -33,6 +34,10 @@ export class ReportsinglePage implements OnInit {
         this.reportdetails = Object(info).reportdetails;
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
+
     });
   }
 

@@ -28,6 +28,7 @@ export class HomePage implements OnInit {
   quicksendform: FormGroup;
   quicksendimage: any;
 
+  connected = true;
 
   constructor(
     public actionsheet: ActionSheetController,
@@ -67,6 +68,9 @@ export class HomePage implements OnInit {
         this.referrals = null;
       }
       this.ready = true;
+    },
+    err => {
+     this.connected = false;
     });
   }
 

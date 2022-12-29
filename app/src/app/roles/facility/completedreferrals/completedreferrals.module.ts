@@ -8,13 +8,15 @@ import { CompletedreferralsPageRoutingModule } from './completedreferrals-routin
 
 import { CompletedreferralsPage } from './completedreferrals.page';
 import { SearchfilterPipe } from 'src/app/pipes/searchfilter.pipe';
+import { MainModule } from 'src/app/shared/main/main.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CompletedreferralsPageRoutingModule
+    CompletedreferralsPageRoutingModule,
+    MainModule
   ],
   declarations: [CompletedreferralsPage, SearchfilterPipe]
 })

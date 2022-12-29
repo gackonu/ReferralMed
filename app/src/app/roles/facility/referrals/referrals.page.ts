@@ -12,6 +12,8 @@ export class ReferralsPage implements OnInit {
   ready = false;
   incoming: any;
   data: string;
+  connected = true;
+
 
   constructor(
     private calls: CallsService,
@@ -38,6 +40,9 @@ export class ReferralsPage implements OnInit {
         }
         this.ready = true;
       }
+    },
+    err => {
+      this.connected = false;
     });
   }
 
