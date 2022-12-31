@@ -14,11 +14,11 @@
       <div class="image">
         <img *ngIf="!ready" src="{{baseurl}}/uploads/profilepictures/thumbs/default.jpg" alt="">
         <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/thumbs/{{info.profile_picture}}" alt="">
-        <ion-fab>
+        <!-- <ion-fab>
           <ion-fab-button (click)="takePicture()">
             <ion-icon name="camera"></ion-icon>
           </ion-fab-button>
-        </ion-fab>
+        </ion-fab> -->
         <span *ngIf="!ready" class="name">...</span>
         <span *ngIf="ready" class="name">{{info.first_name}} {{info.last_name}}</span>
         <span *ngIf="ready" class="balance">Account Balance: Gh&cent; {{info.account_balance}}</span>

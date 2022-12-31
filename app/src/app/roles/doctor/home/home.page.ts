@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
-import { ActionSheetController, AlertController, Platform, ToastController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, Platform, ToastController } from '@ionic/angular';
 import { CallsService } from 'src/app/services/calls.service';
 import { Capacitor } from '@capacitor/core';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -39,6 +39,7 @@ export class HomePage implements OnInit {
     public platform: Platform,
     public sanitizer: DomSanitizer,
     public toast: ToastController,
+    public loading: LoadingController
   ) {
     this.baseurl = this.calls.getbaseurl();
   }
@@ -122,6 +123,7 @@ export class HomePage implements OnInit {
       quality: 100,
     });
 
+    this.quicksendimage = capturedphoto.webPath;
     const savedimagefile = await this.picturetaken(capturedphoto);
 
     this.quicksend = true;
@@ -152,9 +154,18 @@ export class HomePage implements OnInit {
     alert.present();
   }
 
-  quicksendsend(){
+  async quicksendsend(){
+    const loading = await this.loading.create({
+      message: 'Sending',
+      cssClass: 'loading',
+      spinner: 'lines'
+    });
+
+    loading.present();
+
     this.filedata.append('contact', this.quicksendform.value.contact);
     this.calls.postrequest('/uploadpicture', this.filedata).subscribe(async info => {
+      this.loading.dismiss();
       if(Object(info).status === 203){
         const toast = await this.toast.create({
           header: 'Upload Failed',
@@ -177,6 +188,7 @@ export class HomePage implements OnInit {
           header: 'Referral Sent',
           message: 'Referral slip uploaded successfully',
           color: 'success',
+          duration: 5000,
           buttons: [
             {
               icon: 'close',
@@ -205,8 +217,6 @@ export class HomePage implements OnInit {
   });
 
   private async picturetaken(photo: Photo){
-
-
     const base64Data = await this.readAsBase64(photo);
 
   }
@@ -216,6 +226,12 @@ export class HomePage implements OnInit {
       const file = await Filesystem.readFile({
         path: photo.path,
       });
+      const response = await fetch(photo.webPath);
+      const blob = await response.blob();
+      let postData = new FormData();
+      postData.append('file', blob);
+      this.filedata = postData;
+      postData = null;
       return file.data;
     } else {
       const response = await fetch(photo.webPath);
@@ -224,11 +240,9 @@ export class HomePage implements OnInit {
       postData.append('file', blob);
       this.filedata = postData;
       postData = null;
-      this.quicksendimage = this.sanitizer.bypassSecurityTrustUrl(Capacitor.convertFileSrc(response.url));
+      // this.quicksendimage = this.sanitizer.bypassSecurityTrustUrl(Capacitor.convertFileSrc(response.url));
       return (await this.convertBlobToBase64(blob)) as string;
     }
   }
-
-
 
 }

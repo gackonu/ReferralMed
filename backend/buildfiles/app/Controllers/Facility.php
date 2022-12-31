@@ -236,7 +236,7 @@ class Facility extends BaseController {
     }
 
     public function transactions(){
-        $decode         = $this->decodetoken();
+        $decoded         = $this->decodetoken();
         $facilityid = $this->facilityid($decoded->id);
         $transactions = $this->transactions->select('transactions_patient_name, transactions_procedures, transactions_amount, transactions_amount_after, transactions_status')->where('transactions_facility_id', $facilityid)->orderby('transactions_id', 'DESC')->limit(200)->find();
 

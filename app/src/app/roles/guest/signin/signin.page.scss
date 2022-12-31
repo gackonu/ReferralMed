@@ -11,7 +11,7 @@ ion-content{
         text-align: center;
         img{
             background-color: #fff;
-            border: 1px solid var(--ion-color-color1);
+            // border: 1px solid var(--ion-color-color1);
             border-radius: 8px;
         }
         margin-bottom: 3em;
@@ -65,12 +65,7 @@ ion-content{
 }
 
 .footer{
-    position: absolute;
     text-align: center;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2em;
     p{
         font-size: 0.7em;
     }

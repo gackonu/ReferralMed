@@ -8,7 +8,7 @@
       <form (ngSubmit)="signup()" [formGroup]="credentials">
         <ion-item>
           <ion-label position="stacked">Fullname</ion-label>
-          <ion-input formControlName="fullname" placeholder="John Doe"></ion-input>
+          <ion-input part="placeholder" formControlName="fullname" placeholder="John Doe"></ion-input>
         </ion-item>
         <br>
         <ion-item>
@@ -18,7 +18,7 @@
         <br>
         <ion-item>
           <ion-label position="stacked">Phone Number</ion-label>
-          <ion-input formControlName="phonenumber" placeholder="0555229204"></ion-input>
+          <ion-input formControlName="phonenumber" placeholder="eg. 0209067479"></ion-input>
         </ion-item>
         <!-- <div class="errors">
           <span>Email is required</span>

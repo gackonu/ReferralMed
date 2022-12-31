@@ -4,7 +4,10 @@
       <img src="/assets/images/doctors.png">
       <h1>Welcome to Reef App</h1>
       <p>A platform to ease patient referral process for all</p>
-      <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+      <div class="flex">
+        <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+        <div class="button"><ion-button (click)="start()" fill="solid">Skip</ion-button></div>
+      </div>
     </ng-template>
 
 
@@ -12,23 +15,32 @@
       <img src="/assets/images/easy.png">
       <h1>No hustle for patients</h1>
       <p>We will pick up and send patients to the right centers for their procedures</p>
-      <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+      <div class="flex">
+        <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+        <div class="button"><ion-button (click)="start()" fill="solid">Skip</ion-button></div>
+      </div>
     </ng-template>
 
 
     <ng-template swiperSlide>
       <img src="/assets/images/labs.png">
-      <h1>To notch centers</h1>
+      <h1>Top notch centers</h1>
       <p>We patner with the best facilities in town to ensure patients recieve the best care</p>
-      <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+      <div class="flex">
+        <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+        <div class="button"><ion-button (click)="start()" fill="solid">Skip</ion-button></div>
+      </div>
     </ng-template>
 
 
     <ng-template swiperSlide>
       <img src="/assets/images/getreports.png">
-      <h1>Report Returns</h1>
+      <h1>Reporting</h1>
       <p>Get reports sent back to you when done</p>
-      <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+      <div class="flex">
+        <div class="button"><ion-button (click)="next()" fill="outline">Next</ion-button></div>
+        <div class="button"><ion-button (click)="start()" fill="solid">Skip</ion-button></div>
+      </div>
     </ng-template>
 
 

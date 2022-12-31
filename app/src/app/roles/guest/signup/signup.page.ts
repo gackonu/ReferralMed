@@ -46,9 +46,9 @@ export class SignupPage implements OnInit {
     await loading.present();
 
     this.calls.postrequest('signup', this.credentials.value).subscribe(info => {
-      loading.dismiss();
 
       if(Object(info).status === 'validationerror'){
+        loading.dismiss();
         Object(info).errors.forEach(async element => {
           if(element.length){
             const toast = this.toast.create({
@@ -73,6 +73,7 @@ export class SignupPage implements OnInit {
         this.app.getwho();
         this.calls.rolecheck();
         this.credentials.reset();
+        loading.dismiss();
         this.router.navigateByUrl('/');
       }
 
