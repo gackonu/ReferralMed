@@ -25,8 +25,8 @@
               <span *ngIf="item.referral_procedures">{{item.referral_procedures}}</span>
               <span *ngIf="!item.referral_patient_name">Image Upload</span>
               <span *ngIf="!item.referral_procedures">-</span>
-              <span *ngIf="item.referral_doctor_earned === 0.00">Earned: <span> Gh&cent; {{item.referral_doctor_earned}}</span></span>
-              <span *ngIf="item.referral_doctor_earned !== 0.00">Earned: <span>-</span></span>
+              <span *ngIf="item.referral_doctor_earned !== '0.00'">Earned: <span> Gh&cent; {{item.referral_doctor_earned}}</span></span>
+              <span *ngIf="item.referral_doctor_earned === '0.00'">Earned: <span>-</span></span>
             </ion-col>
             <ion-col size="1">
               <ion-icon size="large" [name]="item.referral_status | referralstatusicon"></ion-icon>

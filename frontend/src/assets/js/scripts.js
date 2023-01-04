@@ -42,13 +42,13 @@ $(function() {
 
             navbar.addClass("nav-scroll");
             // logo.attr('src', 'https://gracious-davinci.51-210-240-92.plesk.page/assets/logo.png');
-            logo.attr('src', 'http://localhost:4200/assets/logo.png');
+            // logo.attr('src', 'http://localhost:4200/assets/logo.png');
 
         }else{
 
             navbar.removeClass("nav-scroll");
             // logo.attr('src', 'https://gracious-davinci.51-210-240-92.plesk.page/assets/logo.png');
-            logo.attr('src', 'http://localhost:4200/assets/logo.png');
+            // logo.attr('src', 'http://localhost:4200/assets/logo.png');
         }
     });
 

@@ -62,7 +62,8 @@ export class AppComponent implements OnInit {
     this.storage.removeItem('token');
     this.calls.rolecheck();
     // this.getwho();
-    this.router.navigateByUrl('/guest');
+    this.router.navigate([`/guest`], {replaceUrl: true});
+    // this.router.navigateByUrl('/guest');
   }
 
 }

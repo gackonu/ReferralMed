@@ -1,0 +1,72 @@
+ERROR - 2023-01-01 00:57:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-01-01 00:57:14 --> 220 SG ESMTP service ready at geopod-ismtpd-1-1
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+starttls: 220 Begin TLS negotiation now
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+Failed to authenticate password. Error: 535 Authentication failed: Bad username / password
+
+ERROR - 2023-01-01 00:57:35 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-01-01 00:57:35 --> 220 SG ESMTP service ready at geopod-ismtpd-canary-0
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+starttls: 220 Begin TLS negotiation now
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+Failed to authenticate password. Error: 535 Authentication failed: Bad username / password
+
+ERROR - 2023-01-01 00:59:06 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-01-01 00:59:06 --> 220 SG ESMTP service ready at geopod-ismtpd-6-0
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+starttls: 220 Begin TLS negotiation now
+
+hello: 250-smtp.sendgrid.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 31457280
+250-STARTTLS
+250-AUTH PLAIN LOGIN
+250 AUTH=PLAIN LOGIN
+
+Failed to authenticate password. Error: 535 Authentication failed: Bad username / password
+
+CRITICAL - 2023-01-01 01:01:27 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Email\Email.php on line 2072.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

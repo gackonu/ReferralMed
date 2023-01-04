@@ -47,28 +47,28 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $SMTPHost = 'smtp.mailtrap.io';
+    public $SMTPHost = 'smtp.sendgrid.net';
 
     /**
      * SMTP Username
      *
      * @var string
      */
-    public $SMTPUser = 'e30e1e71db84e4';
+    public $SMTPUser = 'Reef App API';
 
     /**
      * SMTP Password
      *
      * @var string
      */
-    public $SMTPPass = "c855c830d559f4";
+    public $SMTPPass = "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";
 
     /**
      * SMTP Port
      *
      * @var int
      */
-    public $SMTPPort = 2525;
+    public $SMTPPort = 587;
 
     /**
      * SMTP Timeout (in seconds)

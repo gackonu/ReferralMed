@@ -294,7 +294,7 @@ class Admin extends BaseController {
         $this->users->update($id, ['account_balance' => $doctornewbalance]);
         $this->referrals->update($referralid, ['referral_doctor_earned' => intval($amount)]);
 
-        $this->notifications->sendnotification($id, 'You have been paid Ghc '.$amount.' for your successful referral of '.$data['referral_patient_name'].' your balance after this transaction is '.$data['transactions_amount_after'], '/doctor/transcations', 'unread');
+        $this->notifications->sendnotification($id, 'You have been paid Ghc '.$amount.' for your successful referral of '.$data['referral_patient_name'].' your balance after this transaction is Ghc '.$data['transactions_amount_after'], '/doctor/transcations', 'unread');
 
         return $this->respond([
             'status' => 200
