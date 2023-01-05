@@ -104,6 +104,7 @@ $routes->group('web', function ($routes) {
     $routes->post('activatefacility',                   'Auth::activatefacility');
     $routes->get('verifyresettoken/(:any)',             'Auth::verifyresettoken/$1');
     $routes->post('resetpassword',                      'Auth::resetpassword');
+    $routes->post('sendmessage',                        'Home::sendmessage');
 });
    
 

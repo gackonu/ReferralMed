@@ -106,37 +106,42 @@
                    </div>
 
                    <div class="col-lg-7">
-                       <form class="form" id="contact-form" >
+                       <form (ngSubmit)="sendmessage()" [formGroup]="messageform" class="form" id="contact-form" >
 
                            <div class="messages"></div>
+                            <div class="alert alert-info alert-dismissible" *ngIf="messagerecieved">Message Recieved. Thank you for your feedback.
 
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                            </div>
                            <div class="controls">
 
                                <div class="row">
 
                                    <div class="col-md-6">
                                        <div class="form-group">
-                                           <input id="form_name" type="text" name="name" placeholder="Name" required="required">
+                                           <input id="form_name" type="text" required formControlName="name" placeholder="Name" required="required">
                                        </div>
                                    </div>
                                    <div class="col-md-6">
                                        <div class="form-group">
-                                           <input id="form_email" type="email" name="email" placeholder="Email" required="required">
+                                           <input id="form_email" type="email" required formControlName="email" placeholder="Email" required="required">
                                        </div>
                                    </div>
                                    <div class="col-md-12">
                                        <div class="form-group">
-                                           <input id="form_subject" type="text" name="subject" placeholder="Subject">
+                                           <input id="form_subject" type="text" required formControlName="subject" placeholder="Subject">
                                        </div>
                                    </div>
                                    <div class="col-md-12">
                                        <div class="form-group">
-                                           <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
+                                           <textarea id="form_message" required formControlName="message" placeholder="Message" rows="4" required="required"></textarea>
                                        </div>
                                    </div>
 
                                    <div class="col-md-12">
-                                       <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
+                                       <button type="submit" [disabled]="!messageform.valid" class="butn butn-bg"><span>Send Message</span></button>
                                    </div>
 
                                </div>                             

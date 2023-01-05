@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
-{
-    public function index() {
 
+use App\Models\MessagesModel;
+use CodeIgniter\API\ResponseTrait;
+
+class Home extends BaseController {
+
+    use ResponseTrait;
+
+    public function index() {
 
         $email = \Config\Services::email();
         $email->setTo('ackonugoodness@gmail.com');
@@ -19,17 +24,21 @@ class Home extends BaseController
             return 'Not';
         }
         // $email->setMessage($template);
-
-
-
-
-
-
-
-
-
         
         // set NODE_OPTIONS=--openssl-legacy-provider
         return view('welcome_message');
+    }
+
+    public function  sendmessage(){
+    
+        $model = new MessagesModel();
+
+        $model->insert($this->request->getvar());
+
+        return $this->respond([
+            'status' => 200
+        ]);
+
+
     }
 }
