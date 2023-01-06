@@ -100,7 +100,7 @@ class Doctor extends BaseController {
 
         $this->referrals->insert($data);
         $doctorname = $this->getmyname($decode->id);
-        $this->notifications->sendnotification($decode->id, $data['referral_patient_name'].'\'s referral has been sent to Reef Med System', '/doctor/history', 'unread');
+        $this->notifications->sendnotification($decode->id, $data['referral_patient_name'].'\'s referral has been sent to Reef App System', '/doctor/history', 'unread');
         $this->notifications->sendnotification(1, $doctorname.' referred '.$data['referral_patient_name'], '/admin/home', 'unread');
 
         return $this->respond([
@@ -161,7 +161,7 @@ class Doctor extends BaseController {
             }
             $this->referrals->insert($data);
             $doctorname = $this->getmyname($decode->id);
-            $this->notifications->sendnotification($decode->id, 'Image referral has been sent to Reef Med System', '/doctor/history', 'unread');
+            $this->notifications->sendnotification($decode->id, 'Image referral has been sent to Reef App System', '/doctor/history', 'unread');
             $this->notifications->sendnotification(1, $doctorname.' sent an image referral', '/admin/home', 'unread');
             return $this->respond([
                 'status' => 200,

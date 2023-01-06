@@ -9,12 +9,12 @@ class Email extends BaseConfig
     /**
      * @var string
      */
-    public $fromEmail = "reefmed";
+    public $fromEmail = "admin@reefapp.xyz";
 
     /**
      * @var string
      */
-    public $fromName = "Ref Med";
+    public $fromName = "Reef App";
 
     /**
      * @var string
@@ -47,28 +47,28 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $SMTPHost = 'smtp.sendgrid.net';
+    public $SMTPHost = 'reefapp.xyz';
 
     /**
      * SMTP Username
      *
      * @var string
      */
-    public $SMTPUser = 'Reef App API';
+    public $SMTPUser = 'admin@reefapp.xyz';
 
     /**
      * SMTP Password
      *
      * @var string
      */
-    public $SMTPPass = "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";
+    public $SMTPPass = 'Tmorgyfb34';
 
     /**
      * SMTP Port
      *
      * @var int
      */
-    public $SMTPPort = 587;
+    public $SMTPPort = 465;
 
     /**
      * SMTP Timeout (in seconds)
@@ -89,7 +89,7 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $SMTPCrypto = 'tls';
+    public $SMTPCrypto = 'ssl';
 
     /**
      * Enable word-wrap
