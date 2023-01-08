@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { VerifyaccountComponent } from './verifyaccount/verifyaccount.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { VerifyaccountComponent } from './verifyaccount/verifyaccount.component'
     AppComponent,
     HomepageComponent,
     ResetpasswordComponent,
-    VerifyaccountComponent
+    VerifyaccountComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

@@ -37,6 +37,65 @@ export class SignupPage implements OnInit {
     });
   }
 
+  showFullNameErrors(){
+    const fullname = this.credentials.get('fullname');
+    if(fullname?.touched && !fullname.valid){
+      if(fullname?.errors?.required){
+        return 'Fullname is required';
+      }
+      if(fullname?.errors?.minlength){
+        return 'Full name should be at least 6 characters long';
+      }
+    }
+  }
+
+  showEmailErrors(){
+    const email = this.credentials.get('email');
+    if(email?.touched && !email.valid){
+      if(email?.errors?.required){
+        return 'Email is required';
+      }
+      if(email?.errors?.email){
+        return 'Please enter a valid email';
+      }
+    }
+  }
+
+  showPhoneNumberErrors(){
+    const phonenumber = this.credentials.get('phonenumber');
+    if(phonenumber?.touched && !phonenumber.valid){
+      if(phonenumber?.errors?.required){
+        return 'Phone number is required';
+      }
+      if(phonenumber?.errors?.minlength){
+        return 'Phone number should be 10 digits';
+      }
+    }
+  }
+
+  showPasswordErrors(){
+    const password = this.credentials.get('password');
+    if(password?.touched && !password.valid){
+      if(password?.errors?.required){
+        return 'Password is required';
+      }
+      if(password?.errors?.minlength){
+        return 'Password should be at least 6 characters long';
+      }
+    }
+  }
+
+  showCpasswordErrors(){
+    const cpassword = this.credentials.get('cpassword');
+    if(cpassword?.touched && !cpassword.valid){
+      if(cpassword?.errors?.required){
+        return 'This field is required';
+      }
+    }
+  }
+
+
+
   async signup(){
     const loading = await this.loading.create({
       message: 'Please wait',

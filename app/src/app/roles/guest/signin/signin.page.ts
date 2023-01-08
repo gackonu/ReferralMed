@@ -38,6 +38,28 @@ export class SigninPage implements OnInit {
     this.app.getwho();
   }
 
+  showEmailErrors(){
+    const email = this.credentials.get('email');
+    if(email?.touched && !email.valid){
+      if(email?.errors?.required){
+        return 'Email is required';
+      }
+      if(email?.errors?.email){
+        return 'Email is not valid';
+      }
+    }
+    return;
+  }
+
+  showPasswordErrors(){
+    const password = this.credentials.get('password');
+    if(password?.touched && !password.valid){
+      if(password?.errors?.required){
+        return 'Password is required';
+      }
+    }
+  }
+
   async login(){
     const loading = await this.loading.create({
       message: 'Please wait',

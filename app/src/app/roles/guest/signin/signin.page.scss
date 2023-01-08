@@ -73,9 +73,18 @@ ion-content{
 .errors {
     font-size: small;
     color: var(--ion-color-danger);
-    padding-left: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin: 0;
+    padding: 0;
     z-index: 1;
     position: relative;
-  }
+    margin-left: 15px;
+}
+
+.item-has-focus{
+    border: 1px solid var(--ion-color-color1);
+    border-radius: 15px;
+}
+
+.custom{
+--placeholder-opacity: .2;
+}

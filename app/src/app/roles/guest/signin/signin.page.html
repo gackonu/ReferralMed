@@ -8,13 +8,15 @@
       <form (ngSubmit)="login()" [formGroup]="credentials">
         <ion-item>
           <ion-label position="stacked">Email</ion-label>
-          <ion-input formControlName="email" placeholder="example@yahoo.com"><ion-icon name="person-outline"></ion-icon></ion-input>
+          <ion-input formControlName="email" placeholder="example@yahoo.com" class="custom"><ion-icon name="person-outline"></ion-icon></ion-input>
         </ion-item>
+        <p class="errors">{{showEmailErrors()}}</p>
         <br>
         <ion-item>
           <ion-label position="stacked">Password</ion-label>
-          <ion-input formControlName="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"><ion-icon name="lock-closed-outline"></ion-icon></ion-input>
+          <ion-input formControlName="password" type="password" class="custom" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"><ion-icon name="lock-closed-outline"></ion-icon></ion-input>
         </ion-item>
+        <p class="errors">{{showPasswordErrors()}}</p>
         <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Login</ion-button>
       </form>
       <div class="signinup">

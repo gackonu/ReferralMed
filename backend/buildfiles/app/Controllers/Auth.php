@@ -46,7 +46,7 @@ class Auth extends BaseController{
             'phonenumber' => [
                 'rules' => 'required|min_length[10]|is_natural',
                 'errors' => [
-                    'is_natural' => 'Phone number not supported.'
+                    'is_natural' => 'Phone number should be only digits.'
                 ]
             ],
             'email' => [
@@ -79,6 +79,10 @@ class Auth extends BaseController{
                 $errors += [$validation->getError('cpassword')];
             }
             
+            if($validation->hasError('phonenumber')){
+                $errors += [$validation->getError('phonenumber')];
+            }
+
             return $this->respond([
                 'status' => 'validationerror',
                 'errors' => $errors
@@ -109,7 +113,7 @@ class Auth extends BaseController{
                 // $email->setMessage('Hello');
                 $template = view("emailtemplates/signupsuccessful", [
                     'name'          => $data['first_name'], 
-                    'baseurl'       => base_url(), 
+                    'baseurl'       => 'https://reefapp.xyz',
                     'frontendurl'   => getenv('frontendurl'),
                     'token'         => $data['token']
                 ]);

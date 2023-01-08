@@ -8,32 +8,34 @@
       <form (ngSubmit)="signup()" [formGroup]="credentials">
         <ion-item>
           <ion-label position="stacked">Fullname</ion-label>
-          <ion-input part="placeholder" formControlName="fullname" placeholder="John Doe"></ion-input>
+          <ion-input part="placeholder" autocapitalize="words" formControlName="fullname" placeholder="John Doe" class="custom"></ion-input>
         </ion-item>
+        <p class="errors">{{showFullNameErrors()}}</p>
         <br>
         <ion-item>
           <ion-label position="stacked">Email</ion-label>
-          <ion-input formControlName="email" placeholder="example@yahoo.com"></ion-input>
+          <ion-input formControlName="email" placeholder="example@yahoo.com" class="custom"></ion-input>
         </ion-item>
+        <p class="errors">{{showEmailErrors()}}</p>
         <br>
         <ion-item>
           <ion-label position="stacked">Phone Number</ion-label>
-          <ion-input formControlName="phonenumber" placeholder="eg. 0209067479"></ion-input>
+          <ion-input formControlName="phonenumber" type="tel" placeholder="eg. 0209067479" class="custom"></ion-input>
         </ion-item>
-        <!-- <div class="errors">
-          <span>Email is required</span>
-        </div> -->
+        <p class="errors">{{showPhoneNumberErrors()}}</p>
         <br>
         <ion-item>
           <ion-label position="stacked">Password</ion-label>
-          <ion-input formControlName="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"></ion-input>
+          <ion-input formControlName="password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" class="custom"></ion-input>
         </ion-item>
+        <p class="errors">{{showPasswordErrors()}}</p>
         <br>
         <ion-item>
           <ion-label position="stacked">Confirm Password</ion-label>
-          <ion-input formControlName="cpassword" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"></ion-input>
+          <ion-input formControlName="cpassword" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" class="custom"></ion-input>
         </ion-item>
-        <!-- <br> -->
+        <p class="errors">{{showCpasswordErrors()}}</p>
+        <br>
         <span class="notholder">
           <ion-item>
             <ion-label>Are you a health worker?</ion-label>

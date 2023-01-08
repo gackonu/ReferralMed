@@ -1,13 +1,3 @@
-<!-- 
-Hi [NAME],
-Welcome to [PRODUCT/ SERVICE] – we’re excited to have you on board and we’d love to say thank you on behalf of our whole company for chosing us. We believe our [PRODUCT/ SERVICE] will help you [summary of key product/ service benefits].
-To ensure you gain the very best out of our product/ service, we’ve put together some of the most helpful guides:
-This video [LINK] walks you through setting up your [PRODUCT] for the first time. Our FAQ [LINK] is a great place to find the answers to common questions you might have as a new customer. The knowledge base [LINK] has the answers to all of your tech related questions. Our blog [LINK] has some great tips and best practices on how you can use and benefit from [PRODUCT].
-Have any questions or need more information? Just shoot us an email! We’re always here to help. Feel free to hit us up on Facebook (link) or Twitter (link), if you want a fast response, too.
-Take care,
-[YOUR SIGNATURE] -->
-
-
 <!doctype html>
 <html lang="en-US">
 
@@ -34,7 +24,7 @@ Take care,
                     <tr>
                         <td style="text-align:center;">
                             <a href="<?= $frontendurl ?>" title="logo" target="_blank">
-                            <img width="70%" src="<?= $baseurl ?>/assets/logo.png" title="logo" alt="logo">
+                            <img width="70%" src="<?= $frontendurl ?>/assets/logo.png" title="logo" alt="logo">
                           </a>
                         </td>
                     </tr>
@@ -53,7 +43,7 @@ Take care,
                                         <h1 style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">Welcome
                                         </h1>
                                         <p style="font-size:15px; color:#455056; margin:8px 0 0; line-height:24px;">
-                                            Hello <?= $name ?>, Your referral med account has been created successfully. We are extremely happy to have you on board. You will however need to verify your email.</strong></p>
+                                            Hello <?= $name ?>, Your Reef App account has been created successfully. We are extremely happy to have you on board. You will however need to verify your email.</strong></p>
                                         <span
                                             style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
                                         <p
