@@ -133,7 +133,7 @@ export class SignupPage implements OnInit {
         this.calls.rolecheck();
         this.credentials.reset();
         loading.dismiss();
-        this.router.navigateByUrl('/');
+        this.router.navigate([`/`, this.token.decodenewtoken(Object(info).token).aud], {replaceUrl: true});
       }
 
     });

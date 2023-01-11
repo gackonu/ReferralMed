@@ -70,8 +70,8 @@ export class SigninPage implements OnInit {
 
 
     this.calls.postrequest('signin', this.credentials.value).subscribe(async info => {
-        loading.dismiss();
       if(Object(info).status === 'error'){
+        loading.dismiss();
         const alert = await this.alert.create({
           header: 'Signin Unsuccessful',
           message: Object(info).message,
@@ -85,8 +85,8 @@ export class SigninPage implements OnInit {
         this.app.getwho();
         this.calls.rolecheck();
         this.credentials.reset();
+        loading.dismiss();
         this.router.navigate([`/`, this.token.decodenewtoken(Object(info).token).aud], {replaceUrl: true});
-        // this.router.navigateByUrl('/'+this.token.decodenewtoken(Object(info).token).aud);
       }
 
     },

@@ -24,7 +24,7 @@ export class SlidesPage {
 
   start(){
     localStorage.setItem('seenintro', 'true');
-    this.router.navigateByUrl('guest/signin');
+    this.router.navigate(['/guest/signin'], {replaceUrl: true});
   }
 
 }

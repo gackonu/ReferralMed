@@ -328,6 +328,20 @@ a:hover {
   outline: none !important;
   overflow: hidden;
 }
+
+#downloads{
+  margin-top: 1.5em;
+}
+
+#downloads p{
+  font-weight: bold;
+}
+
+#downloads .butn{
+  padding: 6px 17px;
+  border-radius: 9px;
+}
+
 .butn span {
   position: relative;
   z-index: 2;
