@@ -1,7 +1,5 @@
 .card{
     background-color: #fff;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( -10px );
     border-radius: 0.8em;
     padding-top: 5px;
     ion-row{
@@ -43,8 +41,6 @@
         &:nth-child(2){
             span{
                 display: block;
-                // margin: 0;
-                // padding: 0;
                 &:nth-child(1){
                     font-weight: bold;
                 }
@@ -64,5 +60,14 @@
                 
             }
         }
+    }
+}
+
+.card2{
+    background-color: #fff;
+    border-radius: 8px;
+    h4{
+        text-align: center;
+        padding: 1em;
     }
 }

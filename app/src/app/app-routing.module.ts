@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => import('./roles/facility/facility.module').then(m => m.FacilityModule),
     canLoad: [FacilityGuard]
   },
-  { path: '', pathMatch: 'full', redirectTo: 'doctor' },
+  { path: '', pathMatch: 'full', redirectTo: 'guest' },
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { CallsService } from 'src/app/services/calls.service';
 export class HistoryPage implements OnInit {
   history: any;
   connected = true;
+  ready = false;
   constructor(
     private calls: CallsService,
   ) { }
@@ -24,6 +25,7 @@ export class HistoryPage implements OnInit {
 
   fetchdata(){
     this.calls.getrequest('/history').subscribe(info => {
+      this.ready = true;
       if(Object(info).history.length){
         this.history = Object(info).history;
       }

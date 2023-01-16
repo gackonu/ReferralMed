@@ -19,14 +19,6 @@ export class IntroGuard implements CanActivate {
       return false;
     }
 
-    // this.storage.getItem('seenintro').then(data => {
-    //   if(Object(data).length){
-    //     seenintro = false;
-    //     this.router.navigateByUrl('guest/slides');
-    //     return false;
-    //   }
-    // });
-
     return true;
   }
 }

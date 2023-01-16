@@ -1,7 +1,5 @@
 .card{
     background-color: #fff;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( -10px );
     border-radius: 0.8em;
     padding-top: 5px;
     ion-row{
@@ -74,8 +72,6 @@
 }
 
 .card2{
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( -10px );
     background-color: #fff;
     border-radius: 8px;
     h4{

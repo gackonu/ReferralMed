@@ -85,8 +85,8 @@ export class SigninPage implements OnInit {
         this.app.getwho();
         this.calls.rolecheck();
         this.credentials.reset();
-        loading.dismiss();
         this.router.navigate([`/`, this.token.decodenewtoken(Object(info).token).aud], {replaceUrl: true});
+        loading.dismiss();
       }
 
     },
