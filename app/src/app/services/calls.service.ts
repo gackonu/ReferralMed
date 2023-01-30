@@ -2,8 +2,8 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { StorageService } from './storage.service';
 
-const baseurl = 'https://backend.reefapp.xyz';
-// const baseurl = 'http://localhost:8080';
+// const baseurl = 'https://backend.reefapp.xyz';
+const baseurl = 'http://localhost:8080';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +11,8 @@ export class CallsService {
   token: any;
   role: any;
 
-  private baseurl = 'https://backend.reefapp.xyz/api';
-  // private baseurl = 'http://localhost:8080/api';
+  // private baseurl = 'https://backend.reefapp.xyz/api';
+  private baseurl = 'http://localhost:8080/api';
   constructor(
     private http: HttpClient,
     private storage: StorageService

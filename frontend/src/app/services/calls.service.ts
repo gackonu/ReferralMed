@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-// const baseurl = 'http://localhost:8080';
-const baseurl = 'https://backend.reefapp.xyz';
+const baseurl = 'http://localhost:8080';
+// const baseurl = 'https://backend.reefapp.xyz';
 @Injectable({
   providedIn: 'root'
 })
 export class CallsService {
-    private baseurl = 'https://backend.reefapp.xyz/web';
-  // private baseurl = 'http://localhost:8080/web';
+    // private baseurl = 'https://backend.reefapp.xyz/web';
+  private baseurl = 'http://localhost:8080/web';
   constructor(
     private http: HttpClient
   ) { }

@@ -8,6 +8,7 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
 import { MainModule } from 'src/app/shared/main/main.module';
+import { SearchfilterPipe } from 'src/app/pipes/searchfilter.pipe';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { MainModule } from 'src/app/shared/main/main.module';
     ReactiveFormsModule,
     MainModule
   ],
-  declarations: [ProfilePage]
+  declarations: [ProfilePage, SearchfilterPipe]
 })
 export class ProfilePageModule {}

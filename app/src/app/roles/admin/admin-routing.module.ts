@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'completed',
     loadChildren: () => import('./completed/completed.module').then( m => m.CompletedPageModule)
   },
+  {
+    path: 'towns/:id',
+    loadChildren: () => import('./towns/towns.module').then( m => m.TownsPageModule)
+  },
 ];
 
 @NgModule({

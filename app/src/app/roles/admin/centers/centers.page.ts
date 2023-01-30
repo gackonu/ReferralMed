@@ -13,6 +13,7 @@ export class CentersPage implements OnInit {
   // Page Info
   count:    any;
   centers:  any;
+  locations: any;
 
   newcenter: FormGroup;
   ready   = false;
@@ -29,8 +30,6 @@ export class CentersPage implements OnInit {
     this.newcenter = this.fb.group({
       name: [null, [Validators.required]],
       location: [null, [Validators.required]],
-      priceperreferral: [null, [Validators.required]],
-      adminemail: [null, [Validators.required, Validators.email]],
       contact: [null, [Validators.required]],
       type: [null, [Validators.required]]
     });
@@ -44,12 +43,12 @@ export class CentersPage implements OnInit {
   fetchdata(){
     this.calls.getrequest('/facility').subscribe((info: any) => {
       this.count = Object(info).count;
+      this.locations = Object(info).locations;
       if(Object(info).center.length){
         this.centers = Object(info).center;
       } else {
         this.centers = null;
       }
-
 
       this.ready = true;
     });
@@ -136,7 +135,7 @@ export class CentersPage implements OnInit {
           text: 'OK',
           role: 'confirm',
           handler: () => {
-            console.log('Confirmed'+id);
+            this.finalizedelete(id);
           },
         },
       ],
@@ -145,6 +144,20 @@ export class CentersPage implements OnInit {
     await alert.present();
 
     const { role } = await alert.onDidDismiss();
+  }
+
+  async finalizedelete(id){
+    const loading = await this.loading.create({
+      message: 'Please wait',
+      cssClass: 'loading',
+      spinner: 'lines'
+    });
+    loading.present();
+
+    this.calls.getrequest('/finalizedelete/'+id).subscribe(info => {
+      loading.dismiss();
+    });
+
   }
 
   async initpayment(id, name, dp){

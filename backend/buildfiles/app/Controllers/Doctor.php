@@ -68,8 +68,7 @@ class Doctor extends BaseController {
         $decode         = $this->decodetoken();
         $hospital = $this->users->select('hospital')->asObject()->find($decode->id)->hospital;
         if(!empty($hospital)){
-            // $hospital = null;
-            $hospital = explode(', ', $this->users->select('hospital')->asObject()->find($decode->id)->hospital);
+            $hospital = $this->users->select('hospital')->asObject()->find($decode->id)->hospital;
         }
         return $this->respond([
             'status' => 200,
@@ -303,7 +302,7 @@ class Doctor extends BaseController {
             'first_name'    => explode(' ', trim($this->request->getvar('name')))[0],
             'last_name'     => trim(strstr($this->request->getvar('name'), ' ')),
             'phone_number'  => $this->request->getvar('phonenumber'),
-            'hospital'      => implode(', ', $this->request->getvar('hospital')),
+            'hospital'      => implode(',', $this->request->getvar('hospital')),
         ];
 
 

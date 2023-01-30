@@ -33,16 +33,12 @@ const routes: Routes = [
     loadChildren: () => import('./reportsingle/reportsingle.module').then( m => m.ReportsinglePageModule)
   },
   {
-    path: 'newreferrallabs',
-    loadChildren: () => import('./newreferrallabs/newreferrallabs.module').then( m => m.NewreferrallabsPageModule)
+    path: 'newreferral/:type',
+    loadChildren: () => import('./newreferal/newreferal.module').then( m => m.NewreferalPageModule)
   },
   {
     path: 'newreferralscans',
     loadChildren: () => import('./newreferralscans/newreferralscans.module').then( m => m.NewreferralscansPageModule)
-  },
-  {
-    path: 'newreferrallogistics',
-    loadChildren: () => import('./newreferrallogistics/newreferrallogistics.module').then( m => m.NewreferrallogisticsPageModule)
   },
   {
     path: 'noconnection/:page',
@@ -50,6 +46,10 @@ const routes: Routes = [
   },
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
+  {
+    path: 'newreferal',
+    loadChildren: () => import('./newreferal/newreferal.module').then( m => m.NewreferalPageModule)
+  },
 
 ];
 

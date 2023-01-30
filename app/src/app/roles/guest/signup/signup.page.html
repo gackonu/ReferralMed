@@ -8,7 +8,7 @@
       <form (ngSubmit)="signup()" [formGroup]="credentials">
         <ion-item>
           <ion-label position="stacked">Fullname</ion-label>
-          <ion-input part="placeholder" autocapitalize="words" formControlName="fullname" placeholder="John Doe" class="custom"></ion-input>
+          <ion-input autocapitalize="on" part="placeholder" autocapitalize="words" formControlName="fullname" placeholder="John Doe" class="custom"></ion-input>
         </ion-item>
         <p class="errors">{{showFullNameErrors()}}</p>
         <br>
@@ -38,7 +38,7 @@
         <br>
         <span class="notholder">
           <ion-item>
-            <ion-label>Are you a health worker?</ion-label>
+            <ion-label>Are you a Doctor?</ion-label>
             <ion-checkbox formControlName="healthworker" slot="start"></ion-checkbox>
           </ion-item>
         </span>

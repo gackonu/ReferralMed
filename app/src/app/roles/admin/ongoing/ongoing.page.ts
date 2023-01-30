@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { AlertController, AlertInput, LoadingController, ToastController } from '@ionic/angular';
 import { CallsService } from 'src/app/services/calls.service';
 
 @Component({
@@ -41,34 +41,42 @@ export class OngoingPage implements OnInit {
     });
   }
 
-  async markascompleted(id, name){
+  async markascompleted(id, name, procedures){
     const alert = await this.alert.create({
-      header: 'Confirm Completion',
-      message: 'Proceed to prepare report for '+name,
+      header: 'Enter Amount',
+      message: 'Enter Amount to be paid by '+name+' for '+procedures,
+      inputs: [
+        {
+          placeholder: 'Amount',
+          type: 'number',
+          name: 'amount'
+        }
+      ],
       buttons: [
         {
           text: 'cancel',
           role: 'cancel'
         },
         {
-          text: 'Confirm',
-          handler:() => {
-            this.procedurecomplete(id);
+          text: 'Ok',
+          handler: (input: AlertInput) => {
+            this.procedurecomplete(id, Object(input).amount);
           }
         }
       ]
     });
+
     alert.present();
   }
 
-  async procedurecomplete(id){
+  async procedurecomplete(id, amount){
     const loading = await this.loading.create({
       message: 'Please Wait',
       spinner: 'lines',
       cssClass: 'loading'
     });
     loading.present();
-    this.calls.getrequest('/procedurecomplete/'+id).subscribe(info => {
+    this.calls.getrequest('/procedurecomplete/'+id+'/'+amount).subscribe(info => {
 
       if(Object(info).status === 200){
         loading.dismiss();

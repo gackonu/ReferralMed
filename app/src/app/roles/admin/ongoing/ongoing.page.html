@@ -21,9 +21,9 @@
             <span><span class="bold">Procedures:</span> {{item.referral_procedures}}</span>
 
             <span><span class="bold">Center:</span> {{item.name}}</span>
-            <span><span class="bold">Center Location:</span> {{item.Pedu}}</span>
+            <span><span class="bold">Center Location:</span> {{item.location}}</span>
             <span><span class="bold">Center Contact:</span> {{item.contact}}</span>
-            <ion-button (click)="markascompleted(item.referral_id, item.referral_patient_name)" color="success" size="small">Completed</ion-button>
+            <ion-button (click)="markascompleted(item.referral_id, item.name, item.referral_procedures)" color="success" size="small">Completed</ion-button>
             <ion-button (click)="cancelreferral(item.referral_id, item.referral_patient_name)" color="danger" size="small">Cancel</ion-button>
           </ion-col>
         </ion-row>

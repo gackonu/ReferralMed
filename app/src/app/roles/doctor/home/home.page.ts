@@ -79,27 +79,35 @@ export class HomePage implements OnInit {
     const actionSheet = await this.actionsheet.create({
       header: 'Select Referral Type',
       cssClass: '',
-      buttons: [{
+      buttons: [
+      {
         text: 'Labs',
         icon: '',
-        data: {
-          type: 'delete'
-        },
         handler: () => {
-          this.router.navigateByUrl('/doctor/newreferrallabs');
+          this.router.navigateByUrl('/doctor/newreferral/lab');
         }
-      }, {
-        text: 'Scan',
+      },
+      {
+        text: 'Scans',
         icon: '',
         handler: () => {
-          this.router.navigateByUrl('/doctor/newreferralscans');
+          this.router.navigateByUrl('/doctor/newreferral/scan');
         }
-      }, {
-        text: 'Logisitics',
+      },
+      {
+        text: 'X-rays',
         icon: '',
         data: 'Data value',
         handler: () => {
-          this.router.navigateByUrl('/doctor/newreferrallogistics');
+          this.router.navigateByUrl('/doctor/newreferral/x-ray');
+        }
+      },
+      {
+        text: 'Biopsy and Drainage',
+        icon: '',
+        data: 'Data value',
+        handler: () => {
+          this.router.navigateByUrl('/doctor/newreferral/biopsyanddrainage');
         }
       },
        {

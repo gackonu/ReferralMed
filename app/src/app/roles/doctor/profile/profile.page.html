@@ -22,7 +22,7 @@
         <span *ngIf="!ready" class="name">...</span>
         <span *ngIf="ready" class="name">{{info.first_name}} {{info.last_name}}</span>
         <span *ngIf="ready" class="balance">Account Balance: Gh&cent; {{info.account_balance}}</span>
-        <span *ngIf="!ready" class="balance">Account Balance: Gh&cent; 00.00</span>
+        <span *ngIf="!ready" class="balance">Account Balance: Gh&cent; 0.00</span>
       </div>
       
       <form (ngSubmit)="updateprofile()" [formGroup]="profileform" *ngIf="ready">
@@ -38,18 +38,23 @@
           <ion-label position="stacked">Email</ion-label>
           <ion-input readonly value="{{info.email}}"></ion-input>
         </ion-item>
-        <ion-item *ngIf="info.hospital">
+
+
+        <ion-item>
           <ion-label position="stacked">Hospital</ion-label>
-          <ion-select class="toremit" placeholder="{{info.hospital}}" formControlName="hospital" multiple="true">
+          <span id="openmodal" (click)="setOpen(true)">
+            <ion-input [value]="selectedhospitalstring" formControlName="hospital"></ion-input>
+          </span>
+          <!-- <ion-select  class="toremit" placeholder="{{info.hospital}}" formControlName="hospital" multiple="true">
             <ion-select-option *ngFor="let item of hospitals" checked [value]="item.hospital_name">{{item.hospital_name}}</ion-select-option>
-          </ion-select>
+          </ion-select> -->
         </ion-item>
-        <ion-item *ngIf="!info.hospital">
+        <!-- <ion-item *ngIf="!info.hospital">
           <ion-label position="stacked">Hospital</ion-label>
           <ion-select formControlName="hospital" placeholder="Choose Hospital" multiple="true">
             <ion-select-option *ngFor="let item of hospitals" [value]="item.hospital_name">{{item.hospital_name}}</ion-select-option>
           </ion-select>
-        </ion-item>
+        </ion-item> -->
         <ion-button [disabled]="!profileform.valid" type="submit" color="color1" expand="block">Update Profile</ion-button>
       </form>
       <form *ngIf="!ready">
@@ -67,16 +72,29 @@
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Hospital</ion-label>
-          <ion-select multiple="true">
-            <ion-select-option value="peperoni">Peperoni</ion-select-option>
-            <ion-select-option value="hawaii">Hawaii</ion-select-option>
-          </ion-select>
+          <ion-input [value]="selectedhospitalstring"></ion-input>
         </ion-item>
         <ion-button type="submit" color="color1" expand="block">Update Profile</ion-button>
       </form>
     </div>
   </div>
-
   <app-notconnected *ngIf="!connected"></app-notconnected>
+  
+  
+  <ion-modal [isOpen]="isModalOpen" (willDismiss)="onWillDismiss($event)" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ng-template>
+      <ion-content>
+        <ion-searchbar placeholder="Hosptial" [(ngModel)]="searchval" (click)="modal.setCurrentBreakpoint(0.75)"></ion-searchbar>
+          <ion-item  *ngFor="let item of hospitals | searchfilter:searchval:['hospital_name']; let i = index">
+            <ion-checkbox *ngIf="isalreadychecked(item.hospital_name)" checked slot="start" (click)="added(item.hospital_name)" ></ion-checkbox>
+            <ion-checkbox *ngIf="!isalreadychecked(item.hospital_name)" slot="start" (click)="added(item.hospital_name)" ></ion-checkbox>
+            <ion-label>
+              <p>{{item.hospital_name}}</p>
+              <p>{{item.hospital_location}}</p>
+            </ion-label>
+          </ion-item>
 
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>

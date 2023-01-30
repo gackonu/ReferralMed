@@ -22,15 +22,9 @@
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Location</ion-label>
-        <ion-input formControlName="location"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Price Per Referral</ion-label>
-        <ion-input type="number" formControlName="priceperreferral"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Admin Email</ion-label>
-        <ion-input formControlName="adminemail"></ion-input>
+        <ion-select formControlName="location">
+          <ion-select-option *ngFor="let item of locations" value="{{item.location_name}}">{{item.location_name}}</ion-select-option>
+        </ion-select>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Phone Number</ion-label>
@@ -39,9 +33,10 @@
       <ion-item>
         <ion-label position="stacked" position="stacked">Type</ion-label>
         <ion-select formControlName="type">
-          <ion-select-option value="Lab">Lab</ion-select-option>
-          <ion-select-option value="Logistics">Logistics</ion-select-option>
-          <ion-select-option value="Scan">Scan</ion-select-option>
+          <ion-select-option value="Lab">Labs</ion-select-option>
+          <ion-select-option value="Scan">Scans</ion-select-option>
+          <ion-select-option value="X-ray">X-ray</ion-select-option>
+          <ion-select-option value="Biopsy and Drainage">Biopsy and Drainage</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-button type="submit" [disabled]="!newcenter.valid">Create</ion-button>
@@ -89,7 +84,6 @@
               <span> <span>Location:</span> {{item.location}}</span>
               <span> <span>Tel:</span> {{item.contact}}</span>
               <span> <span>Due:</span>Gh&cent; {{item.due_payment}}</span>
-              <span> <span>Referral:</span>Gh&cent; {{item.price_per_referral}}</span>
               <ion-button (click)="deletecenter(item.facility_id, item.name)" color="danger">Remove</ion-button>
               <ion-button (click)="initpayment(item.facility_id, item.name, item.due_payment)" color="success">Payment Made</ion-button>
             </ion-label>

@@ -52,10 +52,11 @@ $routes->group('api', function ($routes) {
         $routes->get('fetchdoctors',                    'Admin::fetchdoctors');
         $routes->get('restbalance/(:any)/(:any)',       'Admin::restbalance/$1/$2');
         $routes->post('addcenter',                      'Admin::addcenter');
+        $routes->get('finalizedelete/(:any)',           'Admin::finalizedelete/$1');
         $routes->get('fetchprocedures/(:any)',          'Admin::fetchprocedures/$1');
         $routes->post('upgradequickreferral',           'Admin::upgradequickreferral');
         $routes->get('allprocedures',                   'Admin::allprocedures');
-        $routes->get('procedurecomplete/(:any)',        'Admin::procedurecomplete/$1');
+        $routes->get('procedurecomplete/(:any)/(:any)', 'Admin::procedurecomplete/$1/$2');
         $routes->post('addprocedure',                   'Admin::addprocedure');
         $routes->get('deleteprocedure/(:any)',          'Admin::deleteprocedure/$1');
         $routes->get('cancelreferral/(:any)',           'Admin::cancelreferral/$1');
@@ -65,6 +66,10 @@ $routes->group('api', function ($routes) {
         $routes->get('getupaidlist',                    'Admin::getupaidlist');
         $routes->get('paydoctor/(:any)/(:any)',         'Admin::paydoctor/$1/$2');
         $routes->get('notifications',                   'Admin::notifications');
+        $routes->get('getlocations',                    'Admin::getlocations');
+        $routes->post('addlocation',                    'Admin::addlocation');
+        $routes->get('gethospitals/(:any)',             'Admin::gethospitals/$1');
+        $routes->post('addhospital',                    'Admin::addhospital');
     });
 
 

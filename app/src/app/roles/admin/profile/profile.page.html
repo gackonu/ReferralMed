@@ -5,16 +5,17 @@
     </ion-buttons>
     <ion-title>Settings</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="toggleadd()" *ngIf="add"><ion-icon name="remove"></ion-icon></ion-button>
-      <ion-button (click)="toggleadd()" *ngIf="!add"><ion-icon name="add"></ion-icon></ion-button>
+      <ion-button *ngIf="addlocation || addprocedure" (click)="this.addprocedure = false; this.addlocation = false" ><ion-icon name="remove"></ion-icon></ion-button>
+      <ion-button *ngIf="!addlocation && !addprocedure"  (click)="add()" ><ion-icon name="add"></ion-icon></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <div class="card" *ngIf="add">
-    <form (ngSubmit)="additem()" [formGroup]="newitem">
+  <div class="card" *ngIf="addprocedure">
+    <h6>Add Procedure</h6>
+    <form (ngSubmit)="addnewprocedure()" [formGroup]="procedureform">
     <ion-item>
       <ion-label position="stacked">Procedures Name</ion-label>
       <ion-input formControlName="procedure"></ion-input>
@@ -22,20 +23,37 @@
     <ion-item>
       <ion-label position="stacked">Type</ion-label>
       <ion-select formControlName="category">
-        <ion-select-option value="Lab">Lab</ion-select-option>
-        <ion-select-option value="Logistics">Logistics</ion-select-option>
-        <ion-select-option value="Scan">Scan</ion-select-option>
+        <ion-select-option value="Lab">Labs</ion-select-option>
+        <ion-select-option value="Scan">Scans</ion-select-option>
+        <ion-select-option value="X-ray">X-ray</ion-select-option>
+        <ion-select-option value="Biopsy and Drainage">Biopsy and Drainage</ion-select-option>
       </ion-select>
     </ion-item>
 
-    <ion-button type="submit" [disabled]="!newitem.valid">Add Procedure</ion-button>
+    <ion-button type="submit" [disabled]="!procedureform.valid">Add Procedure</ion-button>
+    <ion-button (click)="this.addprocedure = false; this.addlocation = false">Cancel</ion-button>
+  </form>
+    
+  </div>
+
+
+  <div class="card" *ngIf="addlocation">
+    <h6>Add Locations</h6>
+    <form (ngSubmit)="addnewlocation()" [formGroup]="locationform">
+    <ion-item>
+      <ion-label position="stacked">Location</ion-label>
+      <ion-input formControlName="location"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!locationform.valid">Add Location</ion-button>
+    <ion-button (click)="this.addprocedure = false; this.addlocation = false">Cancel</ion-button>
   </form>
     
   </div>
   <br>
 
   <div class="card">
-   <h4>Available Procedures</h4>
+   <h4>Procedures</h4>
     <div *ngIf="!available">
       <p>No Procedures Added Yet</p>
     </div>
@@ -61,45 +79,42 @@
       </ion-list>      
     </div>
 
+  </div>
 
+  <div class="card ion-margin-top">
+    <h4>Locations</h4>
+    <div *ngIf="ready">
+      <div *ngIf="!locations">
+        <h3>No Loactations Added</h3>
+      </div>
 
-<!-- <ion-list>
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>
-        Section A
-      </ion-label>
-    </ion-item-divider>
+      <div *ngIf="locations">
+        <ion-list>
+          <ion-item-sliding *ngFor="let item of locations">
+          
+              <ion-item routerLink="/admin/towns/{{item.location_id}}" >
+                <ion-label>
+                  {{item.location_name}}
+                </ion-label>
+              </ion-item>
+          
+              <ion-item-options>
+                <ion-item-option (click)="deletelocation(item.location_id, item.location_name)" color="danger">
+                  <ion-icon slot="bottom" name="trash"></ion-icon>
+                  Delete
+                </ion-item-option>
+              </ion-item-options>
 
-    <ion-item>
-      <ion-label>A1</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>A2</ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-label>A3</ion-label>
-    </ion-item>
-  </ion-item-group>
+          </ion-item-sliding>
+        </ion-list>  
+      </div>
 
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>
-        Section B
-      </ion-label>
-    </ion-item-divider>
+    </div>
 
-    <ion-item>
-      <ion-label>B1</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>B2</ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-label>B3</ion-label>
-    </ion-item>
-  </ion-item-group>
-</ion-list> -->
+    <div *ngIf="!ready">
+      <h5>Loading</h5>
+    </div>
 
   </div>
+
 </ion-content>

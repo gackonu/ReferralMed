@@ -110,7 +110,6 @@ class Auth extends BaseController{
                 $email = \Config\Services::email();
                 $email->setTo($data['email']);
                 $email->setSubject("Welcome Message");
-                // $email->setMessage('Hello');
                 $template = view("emailtemplates/signupsuccessful", [
                     'name'          => $data['first_name'], 
                     'baseurl'       => 'https://reefapp.xyz',
@@ -121,8 +120,8 @@ class Auth extends BaseController{
 
                 
 
-            if ($email->send()) {
-            // if (1) {
+            // if ($email->send()) {
+            if (1) {
                 
                 $accountdets = $this->accounts->where('email', $data['email'])->asObject()->first();
                 $key = getenv('JWT_SECRET');

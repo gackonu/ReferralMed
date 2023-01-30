@@ -30,6 +30,7 @@ const routes: Routes = [
     canLoad: [FacilityGuard]
   },
   { path: '', pathMatch: 'full', redirectTo: 'guest' },
+  { path: '**', pathMatch: 'full', redirectTo: 'guest' },
 ];
 
 @NgModule({

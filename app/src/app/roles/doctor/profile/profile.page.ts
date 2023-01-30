@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { CallsService } from 'src/app/services/calls.service';
 import { PhotoService } from 'src/app/services/photo.service';
+import { IonModal } from '@ionic/angular';
+import { OverlayEventDetail } from '@ionic/core/components';
+
 
 @Component({
   selector: 'app-profile',
@@ -11,12 +14,21 @@ import { PhotoService } from 'src/app/services/photo.service';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+  @ViewChild(IonModal) modal: IonModal;
+  isModalOpen = false;
+
+
   baseurl: string;
   ready = false;
   info: any;
   hospitals: any;
   profileform: FormGroup;
   connected = true;
+  searchval: string;
+  selectedhospitals: string[] = [];
+  selectedhospitalstring = '';
+
+
 
   constructor(
     private calls: CallsService,
@@ -39,6 +51,9 @@ export class ProfilePage implements OnInit {
     this.calls.getrequest('/profile').subscribe(info => {
       this.info = Object(info).info;
       this.hospitals = Object(info).hospitals;
+      if(Object(info).info.hospital){
+        this.selectedhospitals = Object(info).info.hospital.split(',');
+      }
       this.ready = true;
       this.prepareform();
     },
@@ -55,6 +70,34 @@ export class ProfilePage implements OnInit {
     });
   }
 
+  onWillDismiss(event: Event) {
+    this.selectedhospitalstring = this.selectedhospitals.toString();
+    this.isModalOpen = false;
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
+  added(hospitalname){
+    if(!this.selectedhospitals.includes(hospitalname)){
+      this.selectedhospitals.push(hospitalname);
+    } else {
+      const index = this.selectedhospitals.indexOf(hospitalname);
+      if(index !== -1){
+        this.selectedhospitals.splice(index, 1);
+      }
+    }
+  }
+
+  isalreadychecked(hospitalname){
+    if(this.selectedhospitals.includes(hospitalname)){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   async updateprofile(){
     const loading = await this.loading.create({
         message: 'Updating',
@@ -62,6 +105,7 @@ export class ProfilePage implements OnInit {
     });
 
     loading.present();
+    this.profileform.patchValue({hospital: this.selectedhospitals});
 
     this.calls.postrequest('/updateprofile', this.profileform.value).subscribe(async info => {
       loading.dismiss();
@@ -88,8 +132,5 @@ export class ProfilePage implements OnInit {
 
   }
 
-  takePicture(){
-    this.photo.addNewToGallery();
-  }
 
 }
