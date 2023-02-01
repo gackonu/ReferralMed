@@ -1,5 +1,6 @@
 .card{
-    background-color: #fff;
+    background-color: var(--customgraycomp);
+    backdrop-filter: blur(14px) saturate(200%);
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur( -10px );
     padding: 1em;
@@ -7,7 +8,7 @@
     .image{
         text-align: center;
         img{
-            width: 200px;
+            width: 150px;
             border-radius: 50%;
         }
         ion-fab{
@@ -22,11 +23,12 @@
                 font-weight: bold;
                 margin-top: 1em;
                 font-size: 2em;
-                color: var(--ion-color-color1);
+                color: #fff;
             }
             &.balance{
                 font-weight: bold;
                 font-size: 0.8em;
+                color: var(--ion-color-medium);
             }
         }
     }
@@ -34,6 +36,8 @@
         // padding: 1em;
         ion-item{
             margin-bottom: 0.5em;
+            color: #fff;
+            --background: var(--customgraycomp);
         }
         ion-item::part(native) {
             padding-left: 0em;

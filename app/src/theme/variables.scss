@@ -90,14 +90,26 @@
 	--ion-color-color1-shade: #386ce0;
 	--ion-color-color1-tint: #5388ff;
 
+
+  --customgray: #2f3c5a;
+  --customgraycomp: #1e273c;
+
   // --ion-title-color: #407bff;
 
   ion-content{
-    --background: #F9F9F9;
+    // --background: #F9F9F9;
+    // --background: linear-gradient(to bottom right, #F9F9F9, #dad0d0, #f0e2e2);
+    // --background: url('../assets/images/bg2.jpg');
+    // --background: #000 ('../assets/images/bg2.jpg') no-repeat center center cover;
+    --background: none;
+    background-image: url('../assets/images/bg2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   ion-toolbar{
-    --background: var(--ion-color-color1);
+    --background: #2f3c5a;
     --color: #fff;
     &.ios{
       ion-menu-button, ion-back-button, ion-icon{
@@ -105,6 +117,61 @@
       }
     }
   }
+
+/* Note: These styles should be located in your global stylesheet */
+ion-action-sheet .action-sheet-group {
+  background: var(--customgray);
+}
+
+ion-action-sheet .action-sheet-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+ion-action-sheet .action-sheet-cancel::after {
+  background: var(--customgray);
+}
+
+ion-action-sheet .action-sheet-button,
+ion-action-sheet .action-sheet-button.ion-focused {
+  color: #fff;
+}
+
+@media (any-hover: hover) {
+  ion-action-sheet .action-sheet-button:hover {
+    color: #fff;
+  }
+}
+
+ion-action-sheet ion-backdrop {
+  opacity: 0.6;
+}
+
+
+.label-stacked.sc-ion-label-md-h{
+  z-index: 99;
+  color: #fff;
+}
+.ion-invalid.ion-touched .label-stacked.sc-ion-label-md-h:not(.ion-color){
+  color: #fff;
+}
+
+.ion-valid.ion-touched .label-stacked.sc-ion-label-md-h:not(.ion-color){
+  color: #fff;
+}
+
+.label-stacked.sc-ion-label-md-h:not(.ion-color){
+  color: #fff;
+}
+
+ion-label{
+  color: #fff;
+}
+
+.item-interactive.ion-invalid {
+  --highlight-background: #a5a5a5;
+}
+
 }
 
 .ion-color-color1 {
@@ -115,6 +182,9 @@
 	--ion-color-shade: var(--ion-color-color1-shade);
 	--ion-color-tint: var(--ion-color-color1-tint);
 }
+
+
+
 
 @media (prefers-color-scheme: hdark) {
   /*

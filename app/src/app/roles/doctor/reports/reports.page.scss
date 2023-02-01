@@ -4,7 +4,8 @@ h4{
     font-weight: bold;
 }
 .card{
-    background-color: #fff;
+    background-color: var(--customgraycomp);
+    color: #fff;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur( -10px );
     border-radius: 0.8em;

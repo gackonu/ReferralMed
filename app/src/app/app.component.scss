@@ -1,6 +1,6 @@
 ion-menu{
     ion-content{
-        --background: #fff;
+        --background: var(--customgray);
         .image{
             margin: 3em 0;
             text-align: center;
@@ -12,12 +12,18 @@ ion-menu{
             }
         }
         ion-list{
+            background: var(--customgray);
             ion-item{
+                --background: var(--customgray);
                 margin: 0.2em 0.5em;
                 border-radius: 8px;
                 padding: 0.1em 0;
+                --color: #fff;
+                ion-icon{
+                    color: #fff;
+                }
                 &.active{
-                    --background: var(--ion-color-color1);
+                    --background: var(--customgraycomp);
                     --color: #fff;
                     ion-icon{
                         color: #fff;

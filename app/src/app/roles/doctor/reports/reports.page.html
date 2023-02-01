@@ -12,7 +12,6 @@
   <div *ngIf="connected">
     
       <ion-searchbar *ngIf="readyreports" placeholder="Patient name" [(ngModel)]="data"></ion-searchbar>
-        <h4>Reports</h4>
         <div *ngIf="ready">
           <div *ngIf="!readyreports" class="card ion-padding">
             <h5>No Reports Yet</h5>

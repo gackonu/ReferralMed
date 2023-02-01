@@ -37,10 +37,6 @@ const routes: Routes = [
     loadChildren: () => import('./newreferal/newreferal.module').then( m => m.NewreferalPageModule)
   },
   {
-    path: 'newreferralscans',
-    loadChildren: () => import('./newreferralscans/newreferralscans.module').then( m => m.NewreferralscansPageModule)
-  },
-  {
     path: 'noconnection/:page',
     component: NotconnectedComponent
   },

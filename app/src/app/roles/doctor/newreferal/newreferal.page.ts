@@ -27,7 +27,7 @@ export class NewreferalPage implements OnInit {
     private toast: ToastController,
     private alert: AlertController,
     private activatedroute: ActivatedRoute
-  ) { 
+  ) {
     this.referraltype = this.activatedroute.snapshot.params.type;
   }
 
@@ -74,7 +74,6 @@ export class NewreferalPage implements OnInit {
     this.calls.getrequest('/fetchprocedures/'+this.referraltype).subscribe(async info => {
       this.availableprocedures = Object(info).procedures;
       if(Object(info).hospital){
-        
         this.hospitals = Object(info).hospital.split(',');
         console.log(this.hospitals);
       } else {
@@ -101,7 +100,7 @@ export class NewreferalPage implements OnInit {
     err => {
       this.connected = false;
     }
-    )
+    );
   }
 
 

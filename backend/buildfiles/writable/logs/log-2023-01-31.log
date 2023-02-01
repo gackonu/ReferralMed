@@ -1,0 +1,462 @@
+ERROR - 2023-01-31 16:48:26 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 16:48:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 16:48:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 16:48:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 16:48:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 16:48:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 16:48:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 16:48:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:27 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 17:06:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'referral_med', 3306, '', 0)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#4 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\app\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+#5 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+#6 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+#7 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\index.php(74): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\BadAss\Documents\WebDev\Projects\Completed\ReferralMed\backend\buildfiles\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\BadAss...')
+#10 {main}
+CRITICAL - 2023-01-31 17:06:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `referrals`
+WHERE `referral_doctor_id` = :referral_doctor_id:', [...], false)
+ 3 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 4 APPPATH\Controllers\Doctor.php(45): CodeIgniter\Model->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Doctor->homepage()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Doctor))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(74): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

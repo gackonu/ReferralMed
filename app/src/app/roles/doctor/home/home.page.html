@@ -6,23 +6,86 @@
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
+
+
 <ion-content class="ion-padding">
 
   <div *ngIf="connected">
-    <ion-fab *ngIf="!quicksend" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab *ngIf="!quicksend" vertical="bottom" horizontal="end">
       <ion-fab-button color="dark" (click)="photomode()">
         <ion-icon name="camera-outline"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   
-    <ion-fab *ngIf="quicksend" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab *ngIf="quicksend" vertical="bottom" horizontal="end">
       <ion-fab-button color="light" (click)="normalmode()">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   
-  
-    <div class="heading">
+
+    <div class="headcard">
+      <div class="overlay"></div>
+      <div class="inner">
+        <div>
+          <h1>Welcome Back</h1>
+          <p *ngIf="ready">{{userinfo.first_name}}</p>
+          <p *ngIf="!ready">...</p>
+        </div>
+        <div>
+          <img *ngIf="ready" src="{{baseurl}}/uploads/profilepictures/thumbs/{{userinfo.profile_picture}}" alt="">
+        </div>
+      </div>
+    </div>
+
+    <span *ngIf="!quicksend">
+      
+          <div class="stats">
+            <div class="statinner">
+              <div class="card">
+                <span *ngIf="ready" class="count">{{stats.total}}</span>
+                <span *ngIf="!ready" class="count">0</span>
+                <span class="tag">Total</span>
+              </div>
+              <div class="card">
+                <span *ngIf="ready" class="count">{{stats.success}}</span>
+                <span *ngIf="!ready" class="count">0</span>
+                <span class="tag">Successful</span>
+              </div>
+              <div class="card">
+                <span *ngIf="ready" class="count">{{stats.pending}}</span>
+                <span *ngIf="!ready" class="count">0</span>
+                <span class="tag">Pending</span>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="finance">
+            <span *ngIf="ready">
+              <div class="card" *ngIf="verified">
+                <p>Balance</p>
+                <p> <span>Gh&cent;</span> {{userinfo.account_balance}}</p>
+              </div>
+              
+              <div class="notverified" *ngIf="!verified">
+                <p>Balance</p>
+                <h6>Email Verification required to view wallet</h6>
+              </div>
+            </span>
+            <span *ngIf="!ready">
+              <div class="card">
+                <p>Balance</p>
+                <p> <span>Gh&cent;</span> 0.00 </p>
+              </div>
+            </span>
+          </div>
+    </span>
+
+
+
+    
+    <!-- <div class="heading">
       <ion-grid>
         <ion-row>
           <ion-col size="9">
@@ -45,47 +108,8 @@
         
       </span>
   
-    </div>
-    <!-- Othneal Selasi Dotsi
-    P.O.Box K 31, Kotokraba, Cape Coast
-    dotsiselasi8@gmail.com
-    0556233518
-  
-  Apostle Dr. Patrick O. Koomsom
-  Komenda SHTS Box Km 35, Komenda C/R
-  apostlekoomson@gmailcom
-  
-  Bishop Francis Ackonu
-  P.O.Box DL 80 Cape Coast C/R
-  francisackonu01@gmail.com
-  0244659498 -->
-    <div *ngIf="!quicksend" class="account">
-     <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="inner">
-            <span *ngIf="ready">{{stats.total}}</span>
-            <span *ngIf="!ready">-</span>
-            <span>Total</span>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div class="inner">
-            <span *ngIf="ready">{{stats.success}}</span>
-            <span *ngIf="!ready">-</span>
-            <span>Successful</span>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div class="inner">
-            <span *ngIf="ready">{{stats.pending}}</span>
-            <span *ngIf="!ready">-</span>
-            <span>Pending</span>
-          </div>
-        </ion-col>
-      </ion-row>
-     </ion-grid>
-    </div>
+    </div> -->
+
   
     
     <div class="today" *ngIf="!quicksend">
@@ -96,13 +120,13 @@
             </span>
             <span *ngIf="ready">
               <span *ngIf="referrals">
-                <ion-item *ngFor="let item of referrals"><span *ngIf="!item.referral_patient_name"> Image Upload </span> <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}} </span><ion-icon slot="end" [name]="item.referral_status | referralstatusicon"></ion-icon></ion-item>
+                <ion-item *ngFor="let item of referrals"><span *ngIf="!item.referral_patient_name"> Image Upload </span> <span *ngIf="item.referral_patient_name">{{item.referral_patient_name}} </span><ion-icon color="light" slot="end" [name]="item.referral_status | referralstatusicon"></ion-icon></ion-item>
               </span>
               <div *ngIf="!referrals">
                 <p class="noref">No Referrals Made Today</p>
               </div>
             </span>
-            <ion-button (click)="createnew()" color="color1" expand="block">
+            <ion-button (click)="createnew()" color="medium" shape="round" expand="block">
               <ion-icon name="add"></ion-icon>
               <ion-label>New Referral</ion-label>
             </ion-button>
@@ -117,7 +141,7 @@
           <ion-label position="stacked">Patient Contact</ion-label>
           <ion-input required type="number" formControlName="contact"></ion-input>
         </ion-item>
-        <ion-button block color="primary" type="submit" [disabled]="!quicksendform.valid">
+        <ion-button block color="medium" type="submit" [disabled]="!quicksendform.valid">
           Send
         </ion-button>
       </form>

@@ -1,7 +1,9 @@
 .card{
-    background-color: #fff;
     border-radius: 0.8em;
     padding-top: 5px;
+    backdrop-filter: blur(14px) saturate(200%);
+    background-color: var(--customgraycomp);
+    // color: #fff;
     ion-row{
         margin-bottom: 1em;
     }
@@ -13,7 +15,7 @@
                     position: absolute;
                     font-size: 2.5em;
                     font-weight: bold;
-                    color: var(--ion-color-color1);
+                    color: #fff;
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
@@ -22,14 +24,14 @@
                     position: absolute;
                     top: 3px;
                     font-size: 0.8em;
-                    color: var(--ion-color-dark);
+                    color: rgb(170, 170, 170);
                     font-weight: bold;
                     left: 50%;
                     transform: translateX(-50%);
                 }
                 &:nth-child(3){
                     position: absolute;
-                    color: var(--ion-color-dark);
+                    color: rgb(170, 170, 170);
                     font-weight: bold;
                     font-size: 0.8em;
                     left: 50%;
@@ -41,6 +43,7 @@
         &:nth-child(2){
             span{
                 display: block;
+                color: #fff;
                 &:nth-child(1){
                     font-weight: bold;
                 }
@@ -64,7 +67,8 @@
 }
 
 .card2{
-    background-color: #fff;
+    background-color: var(--customgraycomp);
+    color: #fff;
     border-radius: 8px;
     h4{
         text-align: center;

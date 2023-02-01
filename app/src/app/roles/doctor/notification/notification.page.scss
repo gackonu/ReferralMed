@@ -1,9 +1,10 @@
 .notification {
+  color: #fff;
   padding: 1em;
   &.unread {
     font-weight: bold;
     font-size: 0.9em;
-    background: #fff;
+    background: var(--customgray);
   }
   span {
     display: block;
