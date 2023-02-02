@@ -50,7 +50,7 @@
             <ion-select-option *ngFor="let item of hospitals" [value]="item.hospital_name">{{item.hospital_name}}</ion-select-option>
           </ion-select>
         </ion-item> -->
-        <ion-button [disabled]="!profileform.valid" type="submit" color="color1" expand="block">Update Profile</ion-button>
+        <ion-button [disabled]="!profileform.valid" type="submit" color="medium" expand="block">Update Profile</ion-button>
       </form>
       <form *ngIf="!ready">
         <ion-item class="ion-no-padding">
@@ -69,7 +69,7 @@
           <ion-label position="stacked">Hospital</ion-label>
           <ion-input [value]="selectedhospitalstring"></ion-input>
         </ion-item>
-        <ion-button type="submit" color="color1" expand="block">Update Profile</ion-button>
+        <ion-button type="submit" color="medium" expand="block">Update Profile</ion-button>
       </form>
     </div>
   </div>

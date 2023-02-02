@@ -88,3 +88,19 @@ ion-content{
 .custom{
 --placeholder-opacity: .2;
 }
+
+.label-stacked.sc-ion-label-md-h{
+    z-index: 99;
+    color: rgb(0, 0, 0);
+  }
+  .ion-invalid.ion-touched .label-stacked.sc-ion-label-md-h:not(.ion-color){
+    color: rgb(0, 0, 0);
+  }
+  
+  .ion-valid.ion-touched .label-stacked.sc-ion-label-md-h:not(.ion-color){
+    color: rgb(0, 0, 0);
+  }
+  
+  .label-stacked.sc-ion-label-md-h:not(.ion-color){
+    color: rgb(0, 0, 0);
+  }
