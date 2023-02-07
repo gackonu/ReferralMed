@@ -4,8 +4,8 @@
 =======================*/
 
 
-.page_404{ 
-    padding:40px 0; background:#fff;
+.page_404{
+    padding:40px 0; background:rgba(255, 255, 255, 0);
     padding-top: 0;
     text-align: center;
 }
@@ -13,10 +13,11 @@
 .page_404  img{ width:100%;}
 
 .four_zero_four_bg{
-
- background-image: url(../../../assets/images/404.gif);
+    border-radius: 12px;
+    background-image: url(../../../assets/images/404.gif);
     height: 400px;
     background-position: center;
+    background-size: cover;
  }
  
  
@@ -35,3 +36,7 @@
     margin: 20px 0;
     display: inline-block;}
 	.contant_box_404{ margin-top:-50px;}
+
+    p{
+        color: #fff
+    }
